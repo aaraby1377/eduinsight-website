@@ -6,6 +6,7 @@
     <title>EduInsight - AI-Powered Academic Performance</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/index.min.js"></script>
     <style>
       .heading-icon {
         display: inline-block;
@@ -29,11 +30,11 @@
                 <li><a href="#home" class="nav-link active">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#domain" class="nav-link">Domain</a></li>
-                <li><a href="#features" class="nav-link">Features</a></li>
                 <li><a href="#tools" class="nav-link">Tools</a></li>
                 <li><a href="#milestones" class="nav-link">Milestones</a></li>
                 <li><a href="#docs" class="nav-link">Docs</a></li>
                 <li><a href="#team" class="nav-link">Team</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -70,43 +71,43 @@
         <div class="about-container">
             <h1 class="about-title"><span class="heading-icon">🌱</span>About EduInsight</h1>
             <p class="about-description">
-                EduInsight is an AI-powered learning platform built specifically for SLIIT students regarding DMS module.
-                Developed by final-year undergraduates at SLIIT, it integrates cutting edge technologies such as:
+                EduInsight is an AI powered learning platform built specifically for SLIIT students regarding DMS module.
+                Developed by final year undergraduates at SLIIT, it integrates cutting edge technologies such as:
             </p>
 
             <div class="feature-grid">
                 <div class="feature-card">
                     <div class="card-icon">🤖</div>
-                    <h3 class="card-title">AI-Based Content Analysis</h3>
+                    <h3 class="card-title">AI Based Content Analysis</h3>
                     <p class="card-description">
-                        Develop an intelligent system to analyze past exam papers and lecture materials in order to generate model exam questions and concise, exam-focused notes for SLIIT students.
+                        The system analyzes past exam papers and lecture materials to identify important topics and question patterns. It helps generate model exam questions aligned with the syllabus to support effective exam preparation.
                     </p>
-                    <p class="card-feature">• Feature: Model Question Generation</p>
+                    <p class="card-feature">• Feature: Model Paper Generation</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="card-icon">📚</div>
-                    <h3 class="card-title">Syllabus-Aware Learning Support</h3>
+                    <h3 class="card-title">Syllabus Aware Learning Support</h3>
                     <p class="card-description">
-                        Design a system that delivers structured learning resources including summaries, flashcards, audio explanations, and continuous assessment (CA) guidance, aligned with the SLIIT curriculum.
+                        The system provides study materials such as summaries, diagrams, and learning resources to help students better understand key concepts. It also supports students in completing assignments and improving their subject knowledge.
                     </p>
-                    <p class="card-feature">• Feature: Structured Learning</p>
+                    <p class="card-feature">• Feature: CA Guidance</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="card-icon">📊</div>
                     <h3 class="card-title">Adaptive Evaluation & Feedback System</h3>
                     <p class="card-description">
-                        Evaluates student answers using LLM-based semantic analysis and classifies question difficulty using Bloom's Taxonomy. Generates personalized feedback and adapts learning by identifying weak topics for targeted practice.
+                        The system evaluates student answers and provides feedback to improve writing quality. It also tracks performance, identifies weak areas, and suggests additional practice to help students improve.
                     </p>
                     <p class="card-feature">• Feature: Personalized Feedback & Adaptive Learning</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="card-icon">🎯</div>
-                    <h3 class="card-title">NLP-Based Personalization</h3>
+                    <h3 class="card-title">Adaptive Personalization</h3>
                     <p class="card-description">
-                        Implement an NLP-driven system to classify academic content and generate personalized MCQ-based study plans, tailored to individual student performance and learning needs.
+                        The system analyzes student performance in quizzes to identify weak topics. Based on this, it provides personalized questions and study recommendations to support targeted learning.
                     </p>
                     <p class="card-feature">• Feature: Adaptive Study Plans</p>
                 </div>
@@ -152,7 +153,7 @@
             justify-content: center;
             gap: 12px;
             margin-bottom: 32px;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
           }
 
           .tab-btn {
@@ -242,8 +243,11 @@
           <h1 class="section-title"><span class="heading-icon">🔍</span>Research Domain</h1>
 
           <div class="tabs">
-            <button class="tab-btn active" data-tab="background">Background</button>
+            <button class="tab-btn active" data-tab="background">Literature Survey</button>
+            <button class="tab-btn" data-tab="gap">Research Gap</button>
+            <button class="tab-btn" data-tab="problem">Research Problem</button>
             <button class="tab-btn" data-tab="objectives">Research Objectives</button>
+            <button class="tab-btn" data-tab="methodology">Methodology</button>
           </div>
 
           <div id="tab-content"></div>
@@ -255,8 +259,47 @@
         background: {
           type: 'text',
           paragraphs: [
-            "University students face significant challenges due to curriculum and exam misalignment. Students often focus on less important topics while missing frequently tested content. Manual analysis of past papers and lecture materials is time consuming and ineffective.",
-            "This project a Data Driven Analysis platform was created to solve these problems. It uses AI powered NLP, transformer models, and learning analytics to generate personalized, exam oriented study resources that align with university curriculum content."
+            "Recent research in AI and NLP has introduced various educational support systems such as automated essay evaluation, past paper analysis, and content summarization. Techniques like TF-IDF, BERT, and GPT are widely used to analyze academic content and generate study materials.",
+            "Existing systems provide solutions for specific tasks such as summarization, question generation, or evaluation. However, they do not offer a fully integrated platform that combines exam analysis, syllabus mapping, adaptive feedback, and personalized learning support in a single system."
+          ]
+        },
+        gap: {
+          type: 'text',
+          paragraphs: [
+            "Existing systems mainly focus on either lecture material analysis or past paper analysis separately. They do not provide an integrated solution that combines exam pattern analysis, syllabus mapping, automated evaluation, and personalized learning support.",
+            "Additionally, current platforms lack the ability to understand student performance and adapt learning content dynamically based on weak areas.They also do not effectively classify questions based on cognitive levels or provide structured feedback for essay answers. As a result, students receive limited guidance in improving their understanding and exam preparation strategies."
+          ]
+        },
+        problem: {
+          type: 'text',
+          paragraphs: [
+            "Students struggle to identify important topics, understand question difficulty, and prepare effectively for exams due to lack of intelligent support systems.",
+            "There is a need for an integrated AI based system that can analyze past papers, map syllabus content, evaluate student answers, and provide personalized feedback and study recommendations.Additionally, such a system should be able to identify weak areas and adapt the learning process based on student performance. It should also provide structured practice and guidance to improve answer quality and exam readiness."
+          ]
+        },
+        methodology: {
+          type: 'grid',
+          cards: [
+            {
+              icon: '📄',
+              title: 'Model Paper Generation',
+              text: 'The component analyzes past exam papers and lecture materials to identify recurring patterns, key topics, and question structures, then uses this knowledge to generate model exam papers and aligned short notes for exam preparation.'
+            },
+            {
+              icon: '🔤',
+              title: 'Educational Support',
+              text: 'The system provides real-time DMS lecture summaries, generates ER diagrams, and creates flashcards to help students study. It also offers Continuous Assignment (CA) guidance to assist students with their tasks. These features use RAG for content retrieval and multi-agent systems to manage different tasks efficiently.'
+            },
+            {
+              icon: '🧠',
+              title: 'Essay Evaluation & Feedback',
+              text: 'The system takes questions from past papers and classifies their difficulty. It gives practice questions, checks student answers, and provides feedback. It also tracks progress, finds weak topics, and generates more practice using n8n. Based on performance, it adjusts the difficulty of the next questions to support better learning.'
+            },
+            {
+              icon: '🎯',
+              title: 'MCQ Personalization',
+              text: 'AI driven module that identifies students’ weak topics from quiz performance and adapts study plans and MCQ recommendations using GraphRAG for targeted learning.'
+            }
           ]
         },
         objectives: {
@@ -270,12 +313,12 @@
             {
               icon: '🗂️',
               title: 'Objective 02',
-              text: 'Develop a syllabus-aware learning support system that provides summaries, flashcards, audio explanations, and CA guidance.'
+              text: 'Develop a syllabus aware learning support system that provides summaries, flashcards, audio explanations, and CA guidance.'
             },
             {
               icon: '🔮',
               title: 'Objective 03',
-              text: 'Develop an AI-driven evaluation system that assesses student answers, predicts question difficulty, and generates personalized feedback, while continuously adapting learning paths to target each student\'s weak areas.'
+              text: 'Develop a system that extracts and classifies questions from past papers based on difficulty, provides practice questions, evaluates student answers with feedback, tracks performance to identify weak topics, and generates additional practice while adapting question difficulty based on student performance to support effective learning.'
             },
             {
               icon: '🔷',
@@ -317,178 +360,6 @@
 
       renderTab('background');
     </script>
-
-    <!-- Features Section -->
-    <section id="features" class="features-section">
-        <style>
-          @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-
-          .features-section {
-            background: linear-gradient(135deg, #eff6ff 0%, #f8fbff 50%, #edf4ff 100%);
-            min-height: 100vh;
-            padding: 120px 0 80px;
-          }
-
-          .features-container {
-            max-width: 860px;
-            margin: 0 auto;
-            padding: 0 24px;
-          }
-
-          .section-title {
-            text-align: center;
-            font-size: 48px;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            margin-bottom: 60px;
-            background: linear-gradient(135deg, #2563eb, #2563eb);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-          }
-
-          .section-title .features {
-            background: linear-gradient(135deg, #2563eb, #2563eb);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-          }
-
-          .section-title .overview {
-            background: linear-gradient(135deg, #2563eb, #2563eb);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-          }
-
-          .timeline {
-            max-width: 900px;
-            margin: 0 auto;
-            position: relative;
-            padding-left: 90px;
-          }
-
-          .timeline::before {
-            content: '';
-            position: absolute;
-            left: 38px;
-            top: 24px;
-            bottom: 24px;
-            width: 2px;
-            background: #2563eb;
-            opacity: 0.35;
-          }
-
-          .timeline-item {
-            position: relative;
-            margin-bottom: 36px;
-            animation: fadeIn 0.4s ease both;
-          }
-
-          .timeline-item:nth-child(1) { animation-delay: 0.05s; }
-          .timeline-item:nth-child(2) { animation-delay: 0.12s; }
-          .timeline-item:nth-child(3) { animation-delay: 0.19s; }
-          .timeline-item:nth-child(4) { animation-delay: 0.26s; }
-
-          .bubble {
-            position: absolute;
-            left: -52px;
-            top: 22px;
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            background: #2563eb;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 1rem;
-            color: #fff;
-            box-shadow: 0 0 0 6px rgba(37,99,235,0.15);
-            z-index: 1;
-          }
-
-          .features-card {
-            background: #ffffff;
-            border: 1px solid rgba(37, 99, 235, 0.1);
-            border-left: 5px solid #2563eb;
-            border-radius: 0 16px 16px 0;
-            padding: 28px 36px;
-            box-shadow: 0 4px 24px rgba(37, 99, 235, 0.07);
-            transition: box-shadow 0.25s, transform 0.25s;
-          }
-
-          .features-card:hover {
-            box-shadow: 0 8px 32px rgba(37, 99, 235, 0.14);
-            transform: translateX(4px);
-          }
-
-          .features-card h3 {
-            font-size: 1.05rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-            color: #1f2937;
-          }
-
-          .features-card p {
-            font-size: 0.9rem;
-            color: #6b7280;
-            line-height: 1.75;
-          }
-
-          @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(12px); }
-            to   { opacity: 1; transform: translateY(0); }
-          }
-
-          @media (max-width: 600px) {
-            .section-title { font-size: 36px; }
-            .timeline { padding-left: 68px; }
-            .timeline::before { left: 26px; }
-            .bubble { left: -42px; width: 38px; height: 38px; font-size: 0.85rem; }
-          }
-        </style>
-
-        <div class="features-container">
-          <h1 class="section-title"><span class="heading-icon">✨</span>Key <span class="features">Features</span> <span class="overview">Overview</span></h1>
-
-          <div class="timeline">
-
-            <div class="timeline-item">
-              <div class="bubble">1</div>
-              <div class="features-card">
-                <h3>Past Paper Mining</h3>
-                <p>Analyzes past exam papers and lecture slides using TF-IDF, keyphrase extraction, and semantic clustering to generate model exam papers and aligned short notes for targeted exam preparation.</p>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="bubble">2</div>
-              <div class="features-card">
-                <h3>NLP-Driven Study Material Generation</h3>
-                <p>A syllabus-aware learning support system that provides summaries, flashcards, and CA guidance using RAFT + RLHF pipeline to deliver syllabus-aligned notes and audio explanations.</p>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="bubble">3</div>
-              <div class="features-card">
-                <h3>AI-Driven Essay Evaluation</h3>
-                <p>Predicts question difficulty and evaluates essay-type and structured responses using semantic similarity and AI-powered feedback generation, providing personalized educator insights and performance analysis.</p>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="bubble">4</div>
-              <div class="features-card">
-                <h3>Personalized Study Planner</h3>
-                <p>An NLP-based personalization system that classifies educational content using MCQ classification, syllabus analysis, and topic importance mapping to generate adaptive, individualized study plans.</p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-    </section>
 
     <!-- Tools Section -->
     <section id="tools" class="tools-section">
@@ -730,28 +601,10 @@
                 <div class="card-desc">Frontend UI development</div>
               </div>
 
-              <div class="tool-card highlighted" onclick="showDetail('tailwind')">
-                <span class="card-icon">🎨</span>
-                <div class="card-title">Tailwind CSS</div>
-                <div class="card-desc">Modern utility-first CSS</div>
-              </div>
-
-              <div class="tool-card" onclick="showDetail('typescript')">
-                <span class="card-icon">🧠</span>
-                <div class="card-title">TypeScript</div>
-                <div class="card-desc">Static typing for JavaScript</div>
-              </div>
-
               <div class="tool-card highlighted" onclick="showDetail('python')">
                 <span class="card-icon">🐍</span>
                 <div class="card-title">Python</div>
                 <div class="card-desc">AI/ML backend services</div>
-              </div>
-
-              <div class="tool-card" onclick="showDetail('tensorflow')">
-                <span class="card-icon">🧮</span>
-                <div class="card-title">TensorFlow</div>
-                <div class="card-desc">Model training &amp; evaluation</div>
               </div>
 
               <div class="tool-card highlighted" onclick="showDetail('mongodb')">
@@ -824,6 +677,90 @@
                 <span class="card-icon">🤖</span>
                 <div class="card-title">Agentic Pipeline</div>
                 <div class="card-desc">Autonomous AI agent workflow systems</div>
+              </div>
+
+              <div class="tool-card" onclick="showDetail('openai')">
+                <span class="card-icon">🧠</span>
+                <div class="card-title">OpenAI API</div>
+                <div class="card-desc">Large Language Models and embeddings</div>
+              </div>
+
+              <div class="tool-card highlighted" onclick="showDetail('sentencetransformers')">
+                <span class="card-icon">📝</span>
+                <div class="card-title">SentenceTransformers</div>
+                <div class="card-desc">Semantic text embeddings for NLP</div>
+              </div>
+
+              <div class="tool-card" onclick="showDetail('faiss')">
+                <span class="card-icon">🔎</span>
+                <div class="card-title">FAISS</div>
+                <div class="card-desc">Fast similarity search and clustering</div>
+              </div>
+
+              <div class="tool-card highlighted" onclick="showDetail('numpy')">
+                <span class="card-icon">🔢</span>
+                <div class="card-title">NumPy</div>
+                <div class="card-desc">Numerical computing and arrays</div>
+              </div>
+
+              <div class="tool-card" onclick="showDetail('pandas')">
+                <span class="card-icon">🐼</span>
+                <div class="card-title">Pandas</div>
+                <div class="card-desc">Data analysis and manipulation</div>
+              </div>
+
+              <div class="tool-card highlighted" onclick="showDetail('sklearn')">
+                <span class="card-icon">📊</span>
+                <div class="card-title">scikit-learn</div>
+                <div class="card-desc">Machine learning algorithms</div>
+              </div>
+
+              <div class="tool-card" onclick="showDetail('graphviz')">
+                <span class="card-icon">📈</span>
+                <div class="card-title">Graphviz</div>
+                <div class="card-desc">Automated diagram visualization</div>
+              </div>
+
+              <div class="tool-card highlighted" onclick="showDetail('langchain')">
+                <span class="card-icon">⛓️</span>
+                <div class="card-title">LangChain</div>
+                <div class="card-desc">Framework for LLM applications</div>
+              </div>
+
+              <div class="tool-card" onclick="showDetail('pypdf')">
+                <span class="card-icon">📄</span>
+                <div class="card-title">PyMuPDF</div>
+                <div class="card-desc">PDF document processing and extraction</div>
+              </div>
+
+              <div class="tool-card highlighted" onclick="showDetail('opencv')">
+                <span class="card-icon">👁️</span>
+                <div class="card-title">OpenCV</div>
+                <div class="card-desc">Computer vision and image processing</div>
+              </div>
+
+              <div class="tool-card" onclick="showDetail('ml')">
+                <span class="card-icon">🤖</span>
+                <div class="card-title">Machine Learning</div>
+                <div class="card-desc">Data-driven model training and prediction</div>
+              </div>
+
+              <div class="tool-card highlighted" onclick="showDetail('tfidf')">
+                <span class="card-icon">📑</span>
+                <div class="card-title">TF-IDF</div>
+                <div class="card-desc">Text feature extraction and weighting</div>
+              </div>
+
+              <div class="tool-card" onclick="showDetail('pydantic')">
+                <span class="card-icon">✓</span>
+                <div class="card-title">Pydantic</div>
+                <div class="card-desc">Data validation and parsing with Python</div>
+              </div>
+
+              <div class="tool-card highlighted" onclick="showDetail('pickle')">
+                <span class="card-icon">🥒</span>
+                <div class="card-title">Pickle</div>
+                <div class="card-desc">Python object serialization and persistence</div>
               </div>
 
             </div>
@@ -963,6 +900,7 @@
               <div class="ms-card">
                 <div class="ms-title">Project Topic Assessment</div>
                 <div class="ms-date">June 2025</div>
+                <span class="ms-marks-badge">0%</span>
                 <div class="ms-desc">Initial topic assessment document submitted. Included research problem, objectives, and task breakdown.</div>
               </div>
             </div>
@@ -972,6 +910,7 @@
               <div class="ms-card">
                 <div class="ms-title">Project Proposal Presentation</div>
                 <div class="ms-date">September 2025</div>
+                <span class="ms-marks-badge">6%</span>
                 <div class="ms-desc">Presented the proposed research to a panel of judges.</div>
               </div>
             </div>
@@ -981,6 +920,7 @@
               <div class="ms-card">
                 <div class="ms-title">Project Proposal Report</div>
                 <div class="ms-date">September 2025</div>
+                <span class="ms-marks-badge">6%</span>
                 <div class="ms-desc">In-depth analysis and proposed solution submitted as a formal report.</div>
               </div>
             </div>
@@ -990,6 +930,7 @@
               <div class="ms-card">
                 <div class="ms-title">Progress Presentation 1</div>
                 <div class="ms-date">January 2026</div>
+                <span class="ms-marks-badge">15%</span>
                 <div class="ms-desc">Evaluation of 50% project completion with demo of initial features.</div>
               </div>
             </div>
@@ -999,6 +940,7 @@
               <div class="ms-card">
                 <div class="ms-title">Progress Presentation 2</div>
                 <div class="ms-date">March 2026</div>
+                <span class="ms-marks-badge">18%</span>
                 <div class="ms-desc">Evaluation of 90% project completion.</div>
                 </div>
               </div>
@@ -1008,6 +950,7 @@
                 <div class="ms-card">
                   <div class="ms-title">Final Thesis Submission</div>
                   <div class="ms-date">April 2026</div>
+                  <span class="ms-marks-badge">19%</span>
                   <div class="ms-desc">Group and individual thesis documents submitted for evaluation.</div>
               </div>
             </div>
@@ -1017,6 +960,7 @@
               <div class="ms-card">
                 <div class="ms-title">Website Assessment</div>
                 <div class="ms-date">April 2026</div>
+                <span class="ms-marks-badge">2%</span>
                 <div class="ms-desc">Research website submitted for review.</div>
               </div>
             </div>
@@ -1026,6 +970,7 @@
               <div class="ms-card">
                 <div class="ms-title">Final Presentation &amp; Viva</div>
                 <div class="ms-date">April 2026</div>
+                <span class="ms-marks-badge">20%</span>
                 <div class="ms-desc">Final evaluation of the completed product by judges.</div>
               </div>
             </div>
@@ -1438,7 +1383,8 @@
                   <div class="doc-name">Final Presentation</div>
                 </div>
                 <div class="doc-actions">
-                  <a href="Presentation_Doc/Progress_Presentation_2-25-26J-089.pdf" target="_blank">Download ↓</a>
+                  {/* TODO: Replace with actual Final Presentation file path (e.g., Presentation_Doc/Final_Presentation-25-26J-089.pdf) */}
+                  <a href="Presentation_Doc/Final_Presentation-25-26J-089.pdf" target="_blank">Download ↓</a>
                   
                 </div>
               </div>
@@ -1457,33 +1403,18 @@
                   <div class="doc-name">Research Paper</div>
                 </div>
                 <div class="doc-actions">
-                  <a href="#" download>Download ↓</a>
+                  {/* TODO: Replace with actual research paper file path (e.g., Research_Papers/EduInsight-Research-Paper.pdf) */}
+                  <a href="Research_Papers/EduInsight-Research-Paper.pdf" download>Download ↓</a>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Deployment Documents -->
-          <div class="section">
-            <div class="section-title">Deployment Documents</div>
-            <div class="cards-grid">
-              <div class="doc-card">
-                <div class="doc-header">
-                  <div class="file-icon">
-                    <svg viewBox="0 0 32 38" fill="none"><rect x="1" y="1" width="24" height="30" rx="3" fill="rgba(255, 255, 255, 0.1)" stroke="#2563eb" stroke-width="1.5"/><rect x="5" y="8" width="14" height="2" rx="1" fill="#2563eb"/><rect x="5" y="13" width="14" height="2" rx="1" fill="#2563eb"/><rect x="5" y="18" width="10" height="2" rx="1" fill="#2563eb"/><path d="M22 1l7 7h-7V1z" fill="#2563eb"/></svg>
-                  </div>
-                  <div class="doc-name">Deployment Report</div>
-                </div>
-                <div class="doc-actions">
-                  <a href="#" download>Download ↓</a>
-                </div>
-              </div>
-            </div>
-          </div>
+        
 
           <!-- Registration Docs -->
           <div class="section">
-            <div class="section-title">Registration Docs</div>
+            <div class="section-title">Project Charter</div>
             <div class="cards-grid">
               <div class="doc-card">
                 <div class="doc-header">
@@ -1494,6 +1425,64 @@
                 </div>
                 <div class="doc-actions">
                   <a href="TAF_25-26J-089.pdf" download>Download ↓</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Charter -->
+          <div class="section">
+            <div class="section-title">Project Checklist</div>
+            <div class="cards-grid">
+              <div class="doc-card">
+                <div class="doc-header">
+                  <div class="file-icon">
+                    <svg viewBox="0 0 32 38" fill="none"><rect x="1" y="1" width="24" height="30" rx="3" fill="rgba(255, 255, 255, 0.1)" stroke="#2563eb" stroke-width="1.5"/><rect x="5" y="8" width="14" height="2" rx="1" fill="#2563eb"/><rect x="5" y="13" width="14" height="2" rx="1" fill="#2563eb"/><rect x="5" y="18" width="10" height="2" rx="1" fill="#2563eb"/><path d="M22 1l7 7h-7V1z" fill="#2563eb"/></svg>
+                  </div>
+                  <div class="doc-name">Project Checklist 1</div>
+                </div>
+                <div class="doc-actions">
+                  <!-- TODO: Replace with actual project checklist file path -->
+                  <a href="25-26J-089 Master sheet of research paper studied.xlsx" target="_blank">Download ↓</a>
+                </div>
+              </div>
+
+              <div class="doc-card">
+                <div class="doc-header">
+                  <div class="file-icon">
+                    <svg viewBox="0 0 32 38" fill="none"><rect x="1" y="1" width="24" height="30" rx="3" fill="rgba(255, 255, 255, 0.1)" stroke="#2563eb" stroke-width="1.5"/><rect x="5" y="8" width="14" height="2" rx="1" fill="#2563eb"/><rect x="5" y="13" width="14" height="2" rx="1" fill="#2563eb"/><rect x="5" y="18" width="10" height="2" rx="1" fill="#2563eb"/><path d="M22 1l7 7h-7V1z" fill="#2563eb"/></svg>
+                  </div>
+                  <div class="doc-name">Project Checklist 2</div>
+                </div>
+                <div class="doc-actions">
+                  <!-- TODO: Replace with actual project checklist file path -->
+                  <a href="Data Analysis Report 25-26J-089.pdf" target="_blank">Download ↓</a>
+                </div>
+              </div>
+
+              <div class="doc-card">
+                <div class="doc-header">
+                  <div class="file-icon">
+                    <svg viewBox="0 0 32 38" fill="none"><rect x="1" y="1" width="24" height="30" rx="3" fill="rgba(255, 255, 255, 0.1)" stroke="#2563eb" stroke-width="1.5"/><rect x="5" y="8" width="14" height="2" rx="1" fill="#2563eb"/><rect x="5" y="13" width="14" height="2" rx="1" fill="#2563eb"/><rect x="5" y="18" width="10" height="2" rx="1" fill="#2563eb"/><path d="M22 1l7 7h-7V1z" fill="#2563eb"/></svg>
+                  </div>
+                  <div class="doc-name">Project Checklist 3</div>
+                </div>
+                <div class="doc-actions">
+                  <!-- TODO: Replace with actual project checklist file path -->
+                  <a href="Project_Management/Checklist3.pdf" download>Download ↓</a>
+                </div>
+              </div>
+
+              <div class="doc-card">
+                <div class="doc-header">
+                  <div class="file-icon">
+                    <svg viewBox="0 0 32 38" fill="none"><rect x="1" y="1" width="24" height="30" rx="3" fill="rgba(255, 255, 255, 0.1)" stroke="#2563eb" stroke-width="1.5"/><rect x="5" y="8" width="14" height="2" rx="1" fill="#2563eb"/><rect x="5" y="13" width="14" height="2" rx="1" fill="#2563eb"/><rect x="5" y="18" width="10" height="2" rx="1" fill="#2563eb"/><path d="M22 1l7 7h-7V1z" fill="#2563eb"/></svg>
+                  </div>
+                  <div class="doc-name">Project Checklist 4</div>
+                </div>
+                <div class="doc-actions">
+                  <!-- TODO: Replace with actual project checklist file path -->
+                  <a href="Project_Management/Checklist4.pdf" download>Download ↓</a>
                 </div>
               </div>
             </div>
@@ -1727,6 +1716,7 @@
             </div>
             <div class="card-name">Leashaniya K</div>
             <div class="card-role">Team Leader</div>
+            <div class="card-regid">IT22891440</div>
             <div class="card-email">IT22891440@my.sliit.lk</div>
           </div>
 
@@ -1738,6 +1728,7 @@
             </div>
             <div class="card-name">Janushiya R</div>
             <div class="card-role">Member</div>
+            <div class="card-regid">IT22171306</div>
             <div class="card-email">IT22171306@my.sliit.lk</div>
           </div>
 
@@ -1749,6 +1740,7 @@
             </div>
             <div class="card-name">Aaraby T</div>
             <div class="card-role">Member</div>
+            <div class="card-regid">IT22598196</div>
             <div class="card-email">IT22598196@my.sliit.lk</div>
           </div>
 
@@ -1760,6 +1752,7 @@
             </div>
             <div class="card-name">Kajamalan S</div>
             <div class="card-role">Member</div>
+            <div class="card-regid">IT22113672</div>
             <div class="card-email">IT22113672@my.sliit.lk</div>
           </div>
 
@@ -1888,7 +1881,7 @@
 
         <div class="cards-row">
             <!-- GitHub -->
-            <a href="#" class="link-card">
+            <a href="https://github.com/Leashaniya/Research-Project" target="_blank" class="link-card">
                 <div class="card-icon">
                     <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
                         <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/>
@@ -1897,13 +1890,308 @@
                 <div class="card-content">
                     <h3>GitHub Repository</h3>
                     <span class="card-link-text">
-                        View Repository
+                        Leashaniya/Research-Project
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                     </span>
                 </div>
             </a>
 
-        
+            
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <style>
+          .contact-section {
+            background: linear-gradient(135deg, #eff6ff 0%, #f8fbff 50%, #edf4ff 100%);
+            min-height: 100vh;
+            padding: 120px 0 80px;
+          }
+
+          .contact-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 40px;
+          }
+
+          .contact-title {
+            text-align: center;
+            font-size: 48px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #2563eb, #2563eb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 50px;
+            letter-spacing: -0.02em;
+          }
+
+          .contact-layout {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 40px;
+          }
+
+          .contact-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+          }
+
+          .contact-card {
+            background: rgba(255, 255, 255, 0.8);
+            border: 1.5px solid rgba(37, 99, 235, 0.15);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border-radius: 14px;
+            padding: 28px 24px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+          }
+
+          .contact-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 32px rgba(37, 99, 235, 0.18);
+            border-color: rgba(37, 99, 235, 0.4);
+          }
+
+          .contact-icon {
+            font-size: 32px;
+            margin-bottom: 14px;
+          }
+
+          .contact-card h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 8px;
+          }
+
+          .contact-card p {
+            font-size: 0.9rem;
+            color: #6b7280;
+            line-height: 1.6;
+            margin: 0;
+          }
+
+          .contact-card a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+          }
+
+          .contact-card a:hover {
+            color: #1d4ed8;
+          }
+
+          .contact-form-wrapper {
+            background: rgba(255, 255, 255, 0.8);
+            border: 1.5px solid rgba(37, 99, 235, 0.15);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border-radius: 14px;
+            padding: 24px;
+            max-width: 420px;
+            margin: 0 auto;
+          }
+
+          .contact-form-wrapper h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 20px;
+            text-align: center;
+          }
+
+          .form-group {
+            margin-bottom: 16px;
+          }
+
+          .form-group label {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 6px;
+          }
+
+          .form-group input,
+          .form-group textarea {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid rgba(37, 99, 235, 0.2);
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            color: #1f2937;
+            background: rgba(255, 255, 255, 0.6);
+            transition: border-color 0.2s, box-shadow 0.2s;
+          }
+
+          .form-group input:focus,
+          .form-group textarea:focus {
+            outline: none;
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+          }
+
+          .form-group textarea {
+            resize: vertical;
+            min-height: 70px;
+          }
+
+          .contact-submit-btn {
+            width: 100%;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #2563eb, #3b82f6);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+          }
+
+          .contact-submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.3);
+          }
+
+          .contact-submit-btn:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+          }
+
+          .form-message {
+            padding: 12px 16px;
+            border-radius: 8px;
+            margin-bottom: 16px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            visibility: hidden;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+          }
+
+          .form-message.success {
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0);
+            background: #d1fae5;
+            color: #065f46;
+            border: 1px solid #6ee7b7;
+          }
+
+          .form-message.error {
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0);
+            background: #fee2e2;
+            color: #7f1d1d;
+            border: 1px solid #fca5a5;
+          }
+
+          .form-message.loading {
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0);
+            background: #dbeafe;
+            color: #1e40af;
+            border: 1px solid #93c5fd;
+          }
+
+          @keyframes slideIn {
+            from {
+              opacity: 0;
+              transform: translateY(-10px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+
+          @media (max-width: 1024px) {
+            .contact-layout {
+              grid-template-columns: 1fr;
+            }
+
+            .contact-cards {
+              grid-template-columns: 1fr 1fr;
+            }
+          }
+
+          @media (max-width: 768px) {
+            .contact-title {
+              font-size: 36px;
+            }
+
+            .contact-container {
+              padding: 0 20px;
+            }
+
+            .contact-cards {
+              grid-template-columns: 1fr;
+            }
+
+            .contact-card {
+              padding: 20px;
+            }
+
+            .contact-form-wrapper {
+              padding: 24px;
+            }
+          }
+        </style>
+
+        <div class="contact-container">
+          <h1 class="contact-title"><span class="heading-icon">💬</span>Contact Us</h1>
+
+          <div class="contact-layout">
+            
+
+              <div class="contact-card">
+                <div class="contact-icon">📧</div>
+                <h3>Project Email</h3>
+                <p><a href="mailto:IT22891440@my.sliit.lk">IT22891440@my.sliit.lk</a></p>
+              </div>
+
+              
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form-wrapper">
+              <h3>Send us your Message</h3>
+              <div id="form-message" class="form-message"></div>
+              <form class="contact-form">
+                <div class="form-group">
+                  <label for="name">Full Name *</label>
+                  <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Email Address *</label>
+                  <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="subject">Subject *</label>
+                  <input type="text" id="subject" name="subject" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="message">Message *</label>
+                  <textarea id="message" name="message" required></textarea>
+                </div>
+
+                <button type="submit" class="contact-submit-btn" id="submit-btn">Send Message</button>
+              </form>
+            </div>
+          </div>
         </div>
     </section>
 
@@ -1952,6 +2240,7 @@
         <a href="#milestones">Milestones</a>
         <a href="#docs">Documents</a>
         <a href="#team">Team</a>
+        <a href="#contact">Contact</a>
       </div>
     </footer>
 
@@ -2110,22 +2399,6 @@ const toolData = {
     features: ['Component-Based Architecture', 'Virtual DOM for Performance', 'Hooks & State Management', 'React Router for Navigation', 'Context API', 'JSX Syntax'],
     useCases: ['Single Page Apps', 'Dashboard UIs', 'Reusable Components', 'Real-time Updates']
   },
-  tailwind: {
-    icon: '🎨',
-    title: 'Tailwind CSS',
-    badge: 'UI Styling',
-    overview: 'Tailwind CSS is a utility-first CSS framework that lets you build beautiful, responsive designs directly in your markup. It eliminates the need for custom CSS by providing low-level utility classes.',
-    features: ['Utility-First Classes', 'Responsive Design', 'Dark Mode Support', 'Custom Themes', 'JIT Compilation', 'Plugin System'],
-    useCases: ['Rapid Prototyping', 'Responsive Layouts', 'Design Systems', 'Custom Components']
-  },
-  typescript: {
-    icon: '🧠',
-    title: 'TypeScript',
-    badge: 'Typed JavaScript',
-    overview: 'TypeScript is a strongly typed superset of JavaScript that compiles to plain JavaScript. It provides static type checking at compile time, catching errors early and improving code quality and IDE support.',
-    features: ['Static Type Checking', 'Interface Definitions', 'Generics Support', 'Type Inference', 'Enum & Tuples', 'Decorator Support'],
-    useCases: ['Large Codebases', 'Team Collaboration', 'API Type Safety', 'Refactoring']
-  },
   python: {
     icon: '🐍',
     title: 'Python',
@@ -2133,14 +2406,6 @@ const toolData = {
     overview: 'Python is the go-to language for AI and ML development. Its rich ecosystem of libraries like NumPy, Pandas, and scikit-learn, combined with frameworks like FastAPI, makes it ideal for building intelligent backend services.',
     features: ['Rich ML Ecosystem', 'FastAPI Integration', 'Data Processing', 'Scripting & Automation', 'REST API Building', 'Async Support'],
     useCases: ['ML Model Serving', 'Data Pipelines', 'API Development', 'AI Research']
-  },
-  tensorflow: {
-    icon: '🧮',
-    title: 'TensorFlow',
-    badge: 'Deep Learning',
-    overview: 'TensorFlow is an open-source machine learning platform developed by Google. It provides a comprehensive ecosystem for building, training, and deploying machine learning models at scale.',
-    features: ['Neural Network Training', 'GPU/TPU Acceleration', 'Keras Integration', 'TensorBoard Viz', 'Model Export & Deploy', 'Transfer Learning'],
-    useCases: ['Image Classification', 'NLP Tasks', 'Model Evaluation', 'Production Deployment']
   },
   mongodb: {
     icon: '🍃',
@@ -2237,6 +2502,118 @@ const toolData = {
     overview: 'Agentic Pipeline systems create autonomous AI agents that can perceive, reason, and act independently. These pipelines enable sophisticated multi-step workflows where AI agents can make decisions, use tools, and collaborate to achieve complex objectives.',
     features: ['Autonomous Decision Making', 'Tool Usage', 'Multi-Agent Coordination', 'Planning & Execution', 'Memory Systems', 'Self-Improvement'],
     useCases: ['Automated Research', 'Complex Problem Solving', 'Workflow Automation', 'Intelligent Assistance']
+  },
+  openai: {
+    icon: '🧠',
+    title: 'OpenAI API',
+    badge: 'LLM Services',
+    overview: 'OpenAI API provides access to powerful language models including GPT-4 and embeddings. It enables integration of cutting-edge natural language processing capabilities for text generation, summarization, translation, and semantic understanding.',
+    features: ['GPT Model Access', 'Text Embeddings', 'Fine-tuning Support', 'Token-based Pricing', 'Rate Limiting', 'Safety Features'],
+    useCases: ['Content Generation', 'Question Answering', 'Text Summarization', 'Semantic Search']
+  },
+  sentencetransformers: {
+    icon: '📝',
+    title: 'SentenceTransformers',
+    badge: 'Semantic Embeddings',
+    overview: 'SentenceTransformers is a Python library for creating high-quality sentence and text embeddings. It provides pre-trained models for semantic similarity, clustering, and semantic search without requiring labeled data.',
+    features: ['Pre-trained Models', 'Semantic Similarity', 'Fast Encoding', 'Multi-language Support', 'Fine-tuning Support', 'GPU Acceleration'],
+    useCases: ['Semantic Search', 'Text Clustering', 'Duplicate Detection', 'Content Recommendation']
+  },
+  faiss: {
+    icon: '🔎',
+    title: 'FAISS',
+    badge: 'Vector Search',
+    overview: 'FAISS (Facebook AI Similarity Search) is a library for efficient similarity search and clustering of dense vectors. It handles large-scale vector databases and performs fast approximate nearest neighbor search on CPUs and GPUs.',
+    features: ['Vector Similarity Search', 'Large-Scale Indexing', 'GPU Support', 'Approximate Search', 'Clustering Support', 'Memory Efficient'],
+    useCases: ['Semantic Search', 'Recommendation Systems', 'Content Retrieval', 'Image Search']
+  },
+  numpy: {
+    icon: '🔢',
+    title: 'NumPy',
+    badge: 'Numerical Computing',
+    overview: 'NumPy is the fundamental package for numerical computing in Python. It provides support for arrays, matrices, mathematical functions, and high-performance vectorized operations essential for scientific computing and data analysis.',
+    features: ['N-dimensional Arrays', 'Mathematical Functions', 'Linear Algebra', 'Random Number Generation', 'Vectorized Operations', 'Broadcasting'],
+    useCases: ['Data Analysis', 'Scientific Computing', 'Matrix Operations', 'Algorithm Implementation']
+  },
+  pandas: {
+    icon: '🐼',
+    title: 'Pandas',
+    badge: 'Data Analysis',
+    overview: 'Pandas is a powerful Python library for data manipulation and analysis. It provides data structures like DataFrames for handling tabular data, enabling efficient cleaning, transformation, aggregation, and analysis of large datasets.',
+    features: ['DataFrames', 'CSV/Excel I/O', 'Data Cleaning', 'Time Series Analysis', 'Aggregation & Grouping', 'Statistical Analysis'],
+    useCases: ['Data Preprocessing', 'EDA Analysis', 'Data Cleaning', 'Report Generation']
+  },
+  sklearn: {
+    icon: '📊',
+    title: 'scikit-learn',
+    badge: 'Machine Learning',
+    overview: 'scikit-learn is a machine learning library providing simple and efficient tools for data analysis and machine learning. It includes algorithms for classification, regression, clustering, dimensionality reduction, and model evaluation.',
+    features: ['Supervised Learning', 'Unsupervised Learning', 'Model Selection', 'Preprocessing', 'Pipeline Construction', 'Cross-validation'],
+    useCases: ['Classification Models', 'Clustering Analysis', 'Feature Scaling', 'Model Evaluation']
+  },
+  graphviz: {
+    icon: '📈',
+    title: 'Graphviz',
+    badge: 'Graph Visualization',
+    overview: 'Graphviz is a graph visualization software that renders directed and undirected graphs from text descriptions. It automatically produces layouts and is widely used for creating ER diagrams, flowcharts, and network visualizations.',
+    features: ['Automated Layout', 'Multiple Output Formats', 'ER Diagram Generation', 'Flowchart Creation', 'DOT Language', 'Customizable Styling'],
+    useCases: ['Database Schema Visualization', 'ER Diagram Generation', 'Flowchart Creation', 'Network Diagrams']
+  },
+  langchain: {
+    icon: '⛓️',
+    title: 'LangChain',
+    badge: 'LLM Framework',
+    overview: 'LangChain is a framework that facilitates development of applications powered by large language models. It provides abstractions for chaining LLM calls, memory management, agent orchestration, and integration with various data sources and tools.',
+    features: ['LLM Chains', 'Memory Management', 'Agent Framework', 'Document Processing', 'RAG Support', 'Tool Integration'],
+    useCases: ['Chatbot Development', 'Document Q&A', 'Data Analysis Automation', 'Agent-based Workflows']
+  },
+  pypdf: {
+    icon: '📄',
+    title: 'PyMuPDF',
+    badge: 'PDF Processing',
+    overview: 'PyMuPDF is a Python binding for MuPDF, providing fast and powerful PDF document processing. It enables text extraction, image extraction, metadata manipulation, and comprehensive annotations support for PDF files.',
+    features: ['Text Extraction', 'Image Extraction', 'Metadata Handling', 'Page Manipulation', 'Annotation Support', 'Performance Optimized'],
+    useCases: ['Document Extraction', 'PDF Text Mining', 'Metadata Processing', 'Document Analysis']
+  },
+  opencv: {
+    icon: '👁️',
+    title: 'OpenCV',
+    badge: 'Computer Vision',
+    overview: 'OpenCV is an open-source computer vision and machine learning library. It provides optimized algorithms for image processing, feature detection, object recognition, video analysis, and real-time visual applications.',
+    features: ['Image Processing', 'Feature Detection', 'Object Recognition', 'Face Detection', 'Video Analysis', 'Performance Optimized'],
+    useCases: ['Image Analysis', 'Document Scanning', 'Video Processing', 'Real-time Detection']
+  },
+  ml: {
+    icon: '🤖',
+    title: 'Machine Learning',
+    badge: 'Predictive Modeling',
+    overview: 'Machine Learning encompasses techniques and algorithms that enable systems to learn from data and make predictions without being explicitly programmed. It uses statistical methods to identify patterns, build models, and improve performance through experience.',
+    features: ['Supervised Learning', 'Unsupervised Learning', 'Feature Engineering', 'Model Training', 'Cross-validation', 'Hyperparameter Tuning'],
+    useCases: ['Predictive Analytics', 'Student Performance Modeling', 'Classification Tasks', 'Personalization Systems']
+  },
+  tfidf: {
+    icon: '📑',
+    title: 'TF-IDF',
+    badge: 'Text Analysis',
+    overview: 'TF-IDF (Term Frequency-Inverse Document Frequency) is a numerical statistical method used to extract important features from text documents. It measures how significant a word is within a document and across a corpus of documents.',
+    features: ['Term Frequency Calculation', 'Inverse Document Frequency', 'Document Similarity', 'Keyword Extraction', 'Feature Vectorization', 'Text Classification'],
+    useCases: ['Information Retrieval', 'Document Analysis', 'Question Difficulty Assessment', 'Content Relevance Scoring']
+  },
+  pydantic: {
+    icon: '✓',
+    title: 'Pydantic',
+    badge: 'Data Validation',
+    overview: 'Pydantic is a powerful Python data validation and parsing library that uses Python type hints for runtime validation. It ensures data integrity by automatically validating input data against predefined schemas and provides clear error messages for validation failures.',
+    features: ['Type Checking', 'JSON Serialization', 'Custom Validators', 'Error Handling', 'Model Generation', 'Settings Management'],
+    useCases: ['API Request Validation', 'Configuration Management', 'Data Pipeline Validation', 'FastAPI Integration']
+  },
+  pickle: {
+    icon: '🥒',
+    title: 'Pickle',
+    badge: 'Object Serialization',
+    overview: 'Pickle is a Python module for converting Python objects into byte streams (serialization) and reconstructing them back to Python objects (deserialization). It enables efficient storage and transmission of complex data structures like trained ML models.',
+    features: ['Object Serialization', 'Model Persistence', 'State Preservation', 'Efficient Storage', 'Cross-platform Compatibility', 'Version Handling'],
+    useCases: ['ML Model Saving', 'Data Caching', 'Session Storage', 'Object Persistence']
   }
 };
 
@@ -2351,6 +2728,80 @@ function goBack() {
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
+            });
+        }
+
+        // EmailJS Contact Form Handler
+        emailjs.init('YOUR_EMAILJS_PUBLIC_KEY'); // Replace with your actual public key
+
+        const contactForm = document.querySelector('.contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                const fullName = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const subject = document.getElementById('subject').value.trim();
+                const message = document.getElementById('message').value.trim();
+                const submitBtn = document.getElementById('submit-btn');
+                const messageDiv = document.getElementById('form-message');
+
+                // Validation
+                if (!fullName || !email || !subject || !message) {
+                    messageDiv.className = 'form-message error';
+                    messageDiv.textContent = '❌ Please fill in all fields';
+                    return;
+                }
+
+                // Email format validation
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    messageDiv.className = 'form-message error';
+                    messageDiv.textContent = '❌ Please enter a valid email address';
+                    return;
+                }
+
+                // Show loading state
+                messageDiv.className = 'form-message loading';
+                messageDiv.textContent = '⏳ Sending your message...';
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Sending...';
+
+                // Send email using EmailJS
+                emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
+                    to_email: 'IT22891440@my.sliit.lk',
+                    user_email: email,
+                    user_name: fullName,
+                    subject: subject,
+                    message: message
+                }).then(function(response) {
+                    console.log('Email sent successfully!', response.status, response.text);
+                    
+                    // Show success message
+                    messageDiv.className = 'form-message success';
+                    messageDiv.textContent = '✅ Message sent successfully! We will get back to you soon.';
+                    
+                    // Reset form
+                    contactForm.reset();
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Send Message';
+
+                    // Clear message after 5 seconds
+                    setTimeout(() => {
+                        messageDiv.className = 'form-message';
+                        messageDiv.textContent = '';
+                    }, 5000);
+
+                }, function(error) {
+                    console.log('Failed to send email:', error);
+                    
+                    // Show error message
+                    messageDiv.className = 'form-message error';
+                    messageDiv.textContent = '❌ Failed to send message. Please try again or contact us directly at IT22891440@my.sliit.lk';
+                    
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Send Message';
+                });
             });
         }
     </script>

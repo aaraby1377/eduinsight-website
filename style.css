@@ -664,3 +664,35 @@ body {
         font-size: 14px;
     }
 }
+
+/* Milestone Marks Badge */
+.ms-marks-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 12px;
+    margin: 8px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Team Member Registration ID and Bio */
+.card-regid {
+    font-size: 0.75rem;
+    color: #2563eb;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin: 6px 0;
+}
+
+.card-bio {
+    font-size: 0.8rem;
+    color: #6b7280;
+    line-height: 1.4;
+    margin: 6px 0 8px 0;
+    font-style: italic;
+}
