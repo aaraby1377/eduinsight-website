@@ -69,6 +69,12 @@
         </div>
       </div>
     </div>
+    <!-- Scroll Down Button -->
+    <button class="scroll-down-btn" onclick="scrollToContact()">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M6 9l6 6 6-6" />
+      </svg>
+    </button>
   </section>
 
   <!-- About Section -->
@@ -1089,7 +1095,7 @@
       .docs-container {
         max-width: 1200px;
         margin: 0 auto;
-        padding: 0 60px;
+        padding: 0 40px;
       }
 
       .page-title {
@@ -3093,8 +3099,61 @@
         behavior: "smooth",
       });
     }
+    
+    // FIXED: Add scroll detection for scroll-to-top button visibility
+    function handleScrollToTopButton() {
+      const scrollButton = document.querySelector('.scroll-to-top');
+      if (!scrollButton) return;
+      
+      // Get the Contact Us section position
+      const contactSection = document.getElementById('contact');
+      if (!contactSection) return;
+      
+      const contactSectionTop = contactSection.offsetTop;
+      
+      // FIXED: Only show button when scrolled to Contact Us section or below
+      if (window.scrollY >= contactSectionTop - 100) {
+        scrollButton.classList.add('visible');
+      } else {
+        scrollButton.classList.remove('visible');
+      }
+    }
+    
+    // Scroll to Contact functionality
+    function scrollToContact() {
+      const contactSection = document.getElementById('contact');
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+    
+    // Scroll Down button visibility control
+    function handleScrollDownButton() {
+      const scrollDownBtn = document.querySelector('.scroll-down-btn');
+      if (!scrollDownBtn) return;
+      
+      // Hide button when scrolled past home section (beyond 100px)
+      if (window.scrollY > 100) {
+        scrollDownBtn.classList.add('hidden');
+      } else {
+        scrollDownBtn.classList.remove('hidden');
+      }
+    }
+    
+    // Initialize scroll detection
+    document.addEventListener('DOMContentLoaded', function() {
+      // Check initial scroll position
+      handleScrollToTopButton();
+      handleScrollDownButton();
+      
+      // Add scroll event listeners
+      window.addEventListener('scroll', function() {
+        handleScrollToTopButton();
+        handleScrollDownButton();
+      });
+    });
 
-  </script>
+</script>
 </body>
 
 </html>
