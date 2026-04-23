@@ -696,3 +696,14 @@ body {
     margin: 6px 0 8px 0;
     font-style: italic;
 }
+
+/* FormSubmit spam honeypot — must stay empty; hidden from users */
+.fs-hp {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
