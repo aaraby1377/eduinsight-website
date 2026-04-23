@@ -2889,6 +2889,9 @@
     };
 
     function showDetail(toolKey) {
+      // FIXED: Store selected tool in localStorage for persistence
+      localStorage.setItem('selectedTool', toolKey);
+      
       const tool = toolData[toolKey];
       const content = document.getElementById('detail-content');
       content.innerHTML = `
@@ -2914,13 +2917,30 @@
   `;
       document.getElementById('tools-page').style.display = 'none';
       document.getElementById('detail-page').style.display = 'block';
-      window.scrollTo(0, 0);
+      // FIXED: Don't scroll when clicking tools - stay in the same position
     }
 
     function goBack() {
+      // FIXED: Clear the stored tool selection when going back to tools grid
+      localStorage.removeItem('selectedTool');
+      
       document.getElementById('detail-page').style.display = 'none';
       document.getElementById('tools-page').style.display = 'block';
-      window.scrollTo(0, 0);
+      // FIXED: Only scroll to top if needed to prevent jarring navigation
+      if (window.scrollY > document.getElementById('tools').offsetTop - 100) {
+        document.getElementById('tools').scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+    
+    // FIXED: Function to restore selected tool when returning to tools section
+    function restoreSelectedTool() {
+      const selectedTool = localStorage.getItem('selectedTool');
+      if (selectedTool && toolData[selectedTool]) {
+        showDetail(selectedTool);
+      } else {
+        // FIXED: Show first tool as default fallback if no tool selected
+        showDetail('python');
+      }
     }
 
     // Navigation functionality
@@ -2943,6 +2963,21 @@
           const targetId = this.getAttribute('href').substring(1);
           const targetSection = document.getElementById(targetId);
           if (targetSection) {
+            // FIXED: Special handling for tools section to preserve tool state
+            if (targetId === 'tools') {
+              // Check if we should restore a previously selected tool
+              const selectedTool = localStorage.getItem('selectedTool');
+              if (selectedTool && toolData[selectedTool]) {
+                // User is returning to tools - restore their selection
+                setTimeout(() => {
+                  showDetail(selectedTool);
+                }, 100);
+              } else {
+                // Show tools grid by default
+                document.getElementById('tools-page').style.display = 'block';
+                document.getElementById('detail-page').style.display = 'none';
+              }
+            }
             targetSection.scrollIntoView({ behavior: 'smooth' });
           }
         });
@@ -2967,6 +3002,24 @@
         });
       });
 
+      // FIXED: Initialize tools section state on page load
+      const initializeToolsSection = () => {
+        const toolsSection = document.getElementById('tools');
+        if (toolsSection) {
+          // Check if user was previously viewing a tool
+          const selectedTool = localStorage.getItem('selectedTool');
+          if (selectedTool && toolData[selectedTool]) {
+            // Wait a bit for page to fully load then restore the tool
+            setTimeout(() => {
+              showDetail(selectedTool);
+            }, 300);
+          }
+        }
+      };
+      
+      // Initialize tools section
+      initializeToolsSection();
+      
       // Domain button functionality
       const buttons = document.querySelectorAll('.domain-button');
       const contentItems = document.querySelectorAll('.content-item');
