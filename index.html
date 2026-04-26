@@ -37,8 +37,38 @@
         <li><a href="#team" class="nav-link">Team</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
+      <div class="nav-search">
+        <button class="search-btn" onclick="toggleSearch()">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.35-4.35"></path>
+          </svg>
+        </button>
+      </div>
     </div>
   </nav>
+
+  <!-- Search Modal -->
+  <div id="searchModal" class="search-modal" style="display: none;">
+    <div class="search-overlay" onclick="toggleSearch()"></div>
+    <div class="search-container">
+      <div class="search-header">
+        <h3>Search Eduinsight</h3>
+        <button class="search-close" onclick="toggleSearch()">×</button>
+      </div>
+      <input type="text" id="searchInput" placeholder="Search for sections, content, or information..." onkeyup="performSearch(event)">
+      <div id="searchResults" class="search-results"></div>
+    </div>
+  </div>
+
+  <!-- Breadcrumb Navigation -->
+  <div id="breadcrumb" class="breadcrumb-nav" style="display: none;">
+    <div class="breadcrumb-container">
+      <a href="#home" class="breadcrumb-item">Home</a>
+      <span class="breadcrumb-separator">›</span>
+      <span id="currentPage" class="breadcrumb-current"></span>
+    </div>
+  </div>
 
   <!-- Home Section -->
   <section id="home" class="hero">
@@ -649,163 +679,163 @@
         <h1 class="page-title"><span class="heading-icon">🛠️</span>Tools &amp; Technologies</h1>
         <div class="tools-grid">
 
-          <div class="tool-card" onclick="showDetail('react')">
+          <div class="tool-card">
             <span class="card-icon">⚛️</span>
             <div class="card-title">React</div>
             <div class="card-desc">Frontend UI development</div>
           </div>
 
-          <div class="tool-card highlighted" onclick="showDetail('python')">
+          <div class="tool-card highlighted">
             <span class="card-icon">🐍</span>
             <div class="card-title">Python</div>
             <div class="card-desc">AI/ML backend services</div>
           </div>
 
-          <div class="tool-card highlighted" onclick="showDetail('mongodb')">
+          <div class="tool-card highlighted">
             <span class="card-icon">🍃</span>
             <div class="card-title">MongoDB</div>
             <div class="card-desc">NoSQL database for analytics</div>
           </div>
 
-          <div class="tool-card highlighted" onclick="showDetail('fastapi')">
+          <div class="tool-card highlighted">
             <span class="card-icon">⚡</span>
             <div class="card-title">FastAPI</div>
             <div class="card-desc">Lightweight Python backend</div>
           </div>
 
-          <div class="tool-card" onclick="showDetail('vite')">
+          <div class="tool-card">
             <span class="card-icon">🚀</span>
             <div class="card-title">Vite</div>
             <div class="card-desc">Blazing fast dev server for React</div>
           </div>
 
-          <div class="tool-card highlighted" onclick="showDetail('azure')">
+          <div class="tool-card highlighted">
             <span class="card-icon">☁️</span>
             <div class="card-title">Azure</div>
             <div class="card-desc">Cloud hosting and deployment (CI/CD)</div>
           </div>
 
-          <div class="tool-card" onclick="showDetail('github')">
+          <div class="tool-card">
             <span class="card-icon">🔄</span>
             <div class="card-title">GitHub Actions</div>
             <div class="card-desc">Automation workflows for building, testing, deploying</div>
           </div>
 
-          <div class="tool-card highlighted" onclick="showDetail('ocr')">
+          <div class="tool-card highlighted">
             <span class="card-icon">🔍</span>
             <div class="card-title">OCR (Tesseract)</div>
             <div class="card-desc">Text extraction from scanned content &amp; images</div>
           </div>
 
-          <div class="tool-card" onclick="showDetail('rag')">
+          <div class="tool-card">
             <span class="card-icon">🔗</span>
             <div class="card-title">RAG</div>
             <div class="card-desc">Retrieval-Augmented Generation for AI responses</div>
           </div>
 
-          <div class="tool-card highlighted" onclick="showDetail('n8n')">
+          <div class="tool-card highlighted">
             <span class="card-icon">⚙️</span>
             <div class="card-title">n8n Workflow</div>
             <div class="card-desc">Automation workflow orchestration platform</div>
           </div>
 
-          <div class="tool-card" onclick="showDetail('reinforcement')">
+          <div class="tool-card">
             <span class="card-icon">🎯</span>
             <div class="card-title">Reinforcement Learning</div>
             <div class="card-desc">AI training through reward-based learning</div>
           </div>
 
-          <div class="tool-card highlighted" onclick="showDetail('blooms')">
+          <div class="tool-card highlighted">
             <span class="card-icon">🌸</span>
             <div class="card-title">Bloom's Taxonomy</div>
             <div class="card-desc">Educational learning objective classification</div>
           </div>
 
-          <div class="tool-card" onclick="showDetail('graphrag')">
+          <div class="tool-card">
             <span class="card-icon">🕸️</span>
             <div class="card-title">GraphRAG</div>
             <div class="card-desc">Graph-based Retrieval-Augmented Generation</div>
           </div>
 
-          <div class="tool-card highlighted" onclick="showDetail('agentic')">
+          <div class="tool-card highlighted">
             <span class="card-icon">🤖</span>
             <div class="card-title">Agentic Pipeline</div>
             <div class="card-desc">Autonomous AI agent workflow systems</div>
           </div>
 
-          <div class="tool-card" onclick="showDetail('openai')">
+          <div class="tool-card">
             <span class="card-icon">🧠</span>
             <div class="card-title">OpenAI API</div>
             <div class="card-desc">Large Language Models and embeddings</div>
           </div>
 
-          <div class="tool-card highlighted" onclick="showDetail('sentencetransformers')">
+          <div class="tool-card highlighted">
             <span class="card-icon">📝</span>
             <div class="card-title">SentenceTransformers</div>
             <div class="card-desc">Semantic text embeddings for NLP</div>
           </div>
 
-          <div class="tool-card" onclick="showDetail('faiss')">
+          <div class="tool-card">
             <span class="card-icon">🔎</span>
             <div class="card-title">FAISS</div>
             <div class="card-desc">Fast similarity search and clustering</div>
           </div>
 
-          <div class="tool-card highlighted" onclick="showDetail('numpy')">
+          <div class="tool-card highlighted">
             <span class="card-icon">🔢</span>
             <div class="card-title">NumPy</div>
             <div class="card-desc">Numerical computing and arrays</div>
           </div>
 
-          <div class="tool-card" onclick="showDetail('pandas')">
+          <div class="tool-card">
             <span class="card-icon">🐼</span>
             <div class="card-title">Pandas</div>
             <div class="card-desc">Data analysis and manipulation</div>
           </div>
 
-          <div class="tool-card highlighted" onclick="showDetail('sklearn')">
+          <div class="tool-card highlighted">
             <span class="card-icon">📊</span>
             <div class="card-title">scikit-learn</div>
             <div class="card-desc">Machine learning algorithms</div>
           </div>
 
-          <div class="tool-card" onclick="showDetail('graphviz')">
+          <div class="tool-card">
             <span class="card-icon">📈</span>
             <div class="card-title">Graphviz</div>
             <div class="card-desc">Automated diagram visualization</div>
           </div>
 
-          <div class="tool-card highlighted" onclick="showDetail('langchain')">
+          <div class="tool-card highlighted">
             <span class="card-icon">⛓️</span>
             <div class="card-title">LangChain</div>
             <div class="card-desc">Framework for LLM applications</div>
           </div>
 
-          <div class="tool-card" onclick="showDetail('pypdf')">
+          <div class="tool-card">
             <span class="card-icon">📄</span>
             <div class="card-title">PyMuPDF</div>
             <div class="card-desc">PDF document processing and extraction</div>
           </div>
 
-          <div class="tool-card highlighted" onclick="showDetail('opencv')">
+          <div class="tool-card highlighted">
             <span class="card-icon">👁️</span>
             <div class="card-title">OpenCV</div>
             <div class="card-desc">Computer vision and image processing</div>
           </div>
 
-          <div class="tool-card" onclick="showDetail('ml')">
+          <div class="tool-card">
             <span class="card-icon">🤖</span>
             <div class="card-title">Machine Learning</div>
             <div class="card-desc">Data-driven model training and prediction</div>
           </div>
 
-          <div class="tool-card highlighted" onclick="showDetail('tfidf')">
+          <div class="tool-card highlighted">
             <span class="card-icon">📑</span>
             <div class="card-title">TF-IDF</div>
             <div class="card-desc">Text feature extraction and weighting</div>
           </div>
 
-          <div class="tool-card" onclick="showDetail('pydantic')">
+          <div class="tool-card">
             <span class="card-icon">✓</span>
             <div class="card-title">Pydantic</div>
             <div class="card-desc">Data validation and parsing with Python</div>
@@ -815,8 +845,7 @@
       </div>
 
       <div id="detail-page">
-        <button class="back-btn" onclick="goBack()">← Back to Tools</button>
-        <div class="detail-card" id="detail-content"></div>
+                <div class="detail-card" id="detail-content"></div>
       </div>
     </div>
   </section>
@@ -1302,7 +1331,7 @@
               <div class="doc-name">Proposal Report - IT22891440</div>
             </div>
             <div class="doc-actions">
-              <a href="Project Proposal/IT22891440-Project-Proposal.pdf" target="_blank">Download ↓</a>
+              <a href="Project Proposal/IT22891440-Project-Proposal.pdf" target="_blank">View ↓</a>
 
             </div>
           </div>
@@ -1322,7 +1351,7 @@
               <div class="doc-name">Proposal Report - IT22171306</div>
             </div>
             <div class="doc-actions">
-              <a href="Project Proposal/IT22171306-Project-Proposal.pdf" target="_blank">Download ↓</a>
+              <a href="Project Proposal/IT22171306-Project-Proposal.pdf" target="_blank">View ↓</a>
 
             </div>
           </div>
@@ -1342,7 +1371,7 @@
               <div class="doc-name">Proposal Report - IT22598196</div>
             </div>
             <div class="doc-actions">
-              <a href="Project Proposal/IT22598196-Project-Proposal.pdf" target="_blank">Download ↓</a>
+              <a href="Project Proposal/IT22598196-Project-Proposal.pdf" target="_blank">View ↓</a>
 
             </div>
           </div>
@@ -1362,7 +1391,7 @@
               <div class="doc-name">Proposal Report - IT22113672</div>
             </div>
             <div class="doc-actions">
-              <a href="Project Proposal/IT22113672-Project-Proposal.pdf" target="_blank">Download ↓</a>
+              <a href="Project Proposal/IT22113672-Project-Proposal.pdf" target="_blank">View ↓</a>
 
             </div>
           </div>
@@ -1388,7 +1417,7 @@
               <div class="doc-name">Final Report - IT22891440</div>
             </div>
             <div class="doc-actions">
-              <a href="Final Reports/IT22891440-Final-Report.pdf" target="_blank">Download ↓</a>
+              <a href="Final Reports/IT22891440-Final-Report.pdf" target="_blank">View ↓</a>
 
             </div>
           </div>
@@ -1408,7 +1437,7 @@
               <div class="doc-name">Final Report - IT22171306</div>
             </div>
             <div class="doc-actions">
-              <a href="Final Reports/IT22171306-Final-Report.pdf" target="_blank">Download ↓</a>
+              <a href="Final Reports/IT22171306-Final-Report.pdf" target="_blank">View ↓</a>
 
             </div>
           </div>
@@ -1428,7 +1457,7 @@
               <div class="doc-name">Final Report - IT22598196</div>
             </div>
             <div class="doc-actions">
-              <a href="Final Reports/IT22598196-Final-Report.pdf" target="_blank">Download ↓</a>
+              <a href="Final Reports/IT22598196-Final-Report.pdf" target="_blank">View ↓</a>
 
             </div>
           </div>
@@ -1448,7 +1477,7 @@
               <div class="doc-name">Final Report - IT22113672</div>
             </div>
             <div class="doc-actions">
-              <a href="Final Reports/IT22113672-Final-Report.pdf" target="_blank">Download ↓</a>
+              <a href="Final Reports/IT22113672-Final-Report.pdf" target="_blank">View ↓</a>
 
             </div>
           </div>
@@ -1468,7 +1497,7 @@
               <div class="doc-name">Final Group Report</div>
             </div>
             <div class="doc-actions">
-              <a href="Final Reports/Final-Group-Report.pdf" target="_blank">Download ↓</a>
+              <a href="Final Reports/Final-Group-Report.pdf" target="_blank">View ↓</a>
 
             </div>
           </div>
@@ -1494,7 +1523,7 @@
               <div class="doc-name">Proposal Presentation</div>
             </div>
             <div class="doc-actions">
-              <a href="Presentation_Doc/Proposal_Presentation-25-26J-089.pdf" target="_blank">Download ↓</a>
+              <a href="Presentation_Doc/Proposal_Presentation-25-26J-089.pdf" target="_blank">View ↓</a>
 
             </div>
           </div>
@@ -1514,7 +1543,7 @@
               <div class="doc-name">Progress Presentation 1</div>
             </div>
             <div class="doc-actions">
-              <a href="Presentation_Doc/Progress_Presentation_1-25-26J-089.pdf" target="_blank">Download ↓</a>
+              <a href="Presentation_Doc/Progress_Presentation_1-25-26J-089.pdf" target="_blank">View ↓</a>
 
             </div>
           </div>
@@ -1534,7 +1563,7 @@
               <div class="doc-name">Progress Presentation 2</div>
             </div>
             <div class="doc-actions">
-              <a href="Presentation_Doc/Progress_Presentation_2-25-26J-089.pdf" target="_blank">Download ↓</a>
+              <a href="Presentation_Doc/Progress_Presentation_2-25-26J-089.pdf" target="_blank">View ↓</a>
             </div>
           </div>
 
@@ -1553,7 +1582,7 @@
               <div class="doc-name">Final Presentation</div>
             </div>
             <div class="doc-actions">
-              <a href="Presentation_Doc/Final_Presentation-25-26J-089.pdf" target="_blank">Download ↓</a>
+              <a href="Presentation_Doc/Final_Presentation-25-26J-089.pdf" target="_blank">View ↓</a>
             </div>
           </div>
         </div>
@@ -1579,7 +1608,7 @@
             </div>
             <div class="doc-actions">
               <!-- FIXED: Correct path to actual PDF file in project root -->
-              <a href="Data-Driven Curriculum Optimization.pdf" download="Data-Driven-Curriculum-Optimization.pdf">Download ↓</a>
+              <a href="Data-Driven Curriculum Optimization.pdf" target="_blank">View ↓</a>
             </div>
           </div>
         </div>
@@ -1604,7 +1633,7 @@
               <div class="doc-name">Topic Assessment</div>
             </div>
             <div class="doc-actions">
-              <a href="TAF_25-26J-089.pdf" download>Download ↓</a>
+              <a href="TAF_25-26J-089.pdf" target="_blank">View ↓</a>
             </div>
           </div>
         </div>
@@ -1630,7 +1659,7 @@
             </div>
             <div class="doc-actions">
               <!-- TODO: Replace with actual project checklist file path -->
-              <a href="25-26J-089 Master sheet of research paper studied.xlsx" target="_blank">Download ↓</a>
+              <a href="25-26J-089 Master sheet of research paper studied.xlsx" download="25-26J-089-Master-sheet.xlsx">Download ↓</a>
             </div>
           </div>
 
@@ -1650,7 +1679,7 @@
             </div>
             <div class="doc-actions">
               <!-- TODO: Replace with actual project checklist file path -->
-              <a href="Data Analysis Report 25-26J-089.pdf" target="_blank">Download ↓</a>
+              <a href="Data Analysis Report 25-26J-089.pdf" target="_blank">View ↓</a>
             </div>
           </div>
 
@@ -1670,7 +1699,7 @@
             </div>
             <div class="doc-actions">
               <!-- TODO: Replace with actual project checklist file path -->
-              <a href="Project_Management/Checklist3.pdf" download>Download ↓</a>
+              <a href="Project_Management/Checklist3.pdf" target="_blank">View ↓</a>
             </div>
           </div>
 
@@ -1690,7 +1719,7 @@
             </div>
             <div class="doc-actions">
               <!-- TODO: Replace with actual project checklist file path -->
-              <a href="Project_Management/Checklist4.pdf" download>Download ↓</a>
+              <a href="Project_Management/Checklist4.pdf" target="_blank">View ↓</a>
             </div>
           </div>
         </div>
@@ -1853,6 +1882,13 @@
         line-height: 1.4;
       }
 
+      .card-phone {
+        font-size: 0.73rem;
+        color: #6b7280;
+        word-break: break-all;
+        line-height: 1.4;
+      }
+
       .team-divider {
         width: 50px;
         height: 3px;
@@ -1961,6 +1997,7 @@
         <div class="card-role">Team Leader</div>
         <div class="card-regid">IT22891440</div>
         <div class="card-email">IT22891440@my.sliit.lk</div>
+        <div class="card-phone">+94 779 346 476</div>
       </div>
 
       <div class="team-card">
@@ -2415,13 +2452,13 @@
         <div class="contact-card">
           <div class="contact-icon">📧</div>
           <h3>Project Email</h3>
-          <p><a href="mailto:aaraby200001@gmail.com">aaraby200001@gmail.com</a></p>
+          <p><a href="mailto:leashakrish2002@gmail.com">leashakrish2002@gmail.com</a></p>
         </div>
 
         <div class="contact-card">
           <div class="contact-icon">📱</div>
           <h3>Phone Number</h3>
-          <p><a href="tel:+94755000001">+94 755 000 001</a></p>
+          <p><a href="tel:+94779346476">+94 779 346 476</a></p>
         </div>
 
       </div>
@@ -2881,65 +2918,46 @@
       }
     };
 
-    function showDetail(toolKey) {
-      // FIXED: Store selected tool in localStorage for persistence
-      localStorage.setItem('selectedTool', toolKey);
-      
-      const tool = toolData[toolKey];
-      const content = document.getElementById('detail-content');
-      content.innerHTML = `
-    <div class="detail-header">
-      <span class="detail-icon">${tool.icon}</span>
-      <div>
-        <div class="detail-title">${tool.title}</div>
-        <span class="detail-badge">${tool.badge}</span>
-      </div>
-    </div>
-    <div class="detail-divider"></div>
-    <div class="detail-section-title">Overview</div>
-    <div class="detail-text">${tool.overview}</div>
-    <div class="detail-section-title">Key Features</div>
-    <ul class="feature-list">
-      ${tool.features.map(f => `<li>${f}</li>`).join('')}
-    </ul>
-    <div class="detail-divider"></div>
-    <div class="detail-section-title">Use Cases</div>
-    <div>
-      ${tool.useCases.map(u => `<span class="use-case-tag">${u}</span>`).join('')}
-    </div>
-  `;
-      document.getElementById('tools-page').style.display = 'none';
-      document.getElementById('detail-page').style.display = 'block';
-      // FIXED: Don't scroll when clicking tools - stay in the same position
-    }
-
-    function goBack() {
-      // FIXED: Clear the stored tool selection when going back to tools grid
-      localStorage.removeItem('selectedTool');
-      
-      document.getElementById('detail-page').style.display = 'none';
-      document.getElementById('tools-page').style.display = 'block';
-      // FIXED: Only scroll to top if needed to prevent jarring navigation
-      if (window.scrollY > document.getElementById('tools').offsetTop - 100) {
-        document.getElementById('tools').scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-    
-    // FIXED: Function to restore selected tool when returning to tools section
-    function restoreSelectedTool() {
-      const selectedTool = localStorage.getItem('selectedTool');
-      if (selectedTool && toolData[selectedTool]) {
-        showDetail(selectedTool);
-      } else {
-        // FIXED: Show first tool as default fallback if no tool selected
-        showDetail('python');
-      }
-    }
-
-    // Navigation functionality
+    // Enhanced Navigation functionality
     document.addEventListener('DOMContentLoaded', function () {
       const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
       const sections = document.querySelectorAll('section[id]');
+      const breadcrumb = document.getElementById('breadcrumb');
+      const currentPage = document.getElementById('currentPage');
+
+      // Section names for breadcrumbs
+      const sectionNames = {
+        'home': 'Home',
+        'about': 'About',
+        'domain': 'Domain',
+        'tools': 'Tools',
+        'milestones': 'Milestones',
+        'docs': 'Documents',
+        'team': 'Team',
+        'contact': 'Contact'
+      };
+
+      // Search index for search functionality
+      const searchIndex = [
+        { id: 'home', title: 'Home', description: 'Welcome to EduInsight - AI-Powered Academic Performance System', keywords: ['home', 'welcome', 'introduction', 'eduinsight'] },
+        { id: 'about', title: 'About', description: 'Learn about EduInsight features and AI-based content analysis', keywords: ['about', 'features', 'ai', 'analysis', 'learning'] },
+        { id: 'domain', title: 'Domain', description: 'Explore the academic domain and problem background', keywords: ['domain', 'background', 'academic', 'education', 'slit'] },
+        { id: 'tools', title: 'Tools & Technologies', description: 'Discover the technologies used in EduInsight', keywords: ['tools', 'technologies', 'react', 'python', 'mongodb', 'fastapi'] },
+        { id: 'milestones', title: 'Milestones', description: 'Track project progress and achievements', keywords: ['milestones', 'progress', 'timeline', 'achievements', 'project'] },
+        { id: 'docs', title: 'Documents', description: 'Access project documents and reports', keywords: ['documents', 'reports', 'proposals', 'research', 'papers'] },
+        { id: 'team', title: 'Team', description: 'Meet the team members behind EduInsight', keywords: ['team', 'members', 'supervisors', 'students', 'developers'] },
+        { id: 'contact', title: 'Contact', description: 'Get in touch with the EduInsight team', keywords: ['contact', 'email', 'phone', 'reach', 'communication'] }
+      ];
+
+      // Update breadcrumb function
+      function updateBreadcrumb(sectionId) {
+        if (sectionId === 'home') {
+          breadcrumb.style.display = 'none';
+        } else {
+          breadcrumb.style.display = 'block';
+          currentPage.textContent = sectionNames[sectionId] || sectionId;
+        }
+      }
 
       // Handle navigation clicks
       navLinks.forEach(link => {
@@ -2956,62 +2974,119 @@
           const targetId = this.getAttribute('href').substring(1);
           const targetSection = document.getElementById(targetId);
           if (targetSection) {
-            // FIXED: Special handling for tools section to preserve tool state
-            if (targetId === 'tools') {
-              // Check if we should restore a previously selected tool
-              const selectedTool = localStorage.getItem('selectedTool');
-              if (selectedTool && toolData[selectedTool]) {
-                // User is returning to tools - restore their selection
-                setTimeout(() => {
-                  showDetail(selectedTool);
-                }, 100);
-              } else {
-                // Show tools grid by default
-                document.getElementById('tools-page').style.display = 'block';
-                document.getElementById('detail-page').style.display = 'none';
-              }
-            }
             targetSection.scrollIntoView({ behavior: 'smooth' });
+            updateBreadcrumb(targetId);
           }
         });
       });
 
-      // Update active nav link on scroll
-      window.addEventListener('scroll', function () {
+      // Update active nav link on scroll with improved accuracy
+      function updateActiveNavigation() {
         let current = '';
+        const scrollPosition = window.scrollY + 150; // Offset for better detection
+
         sections.forEach(section => {
           const sectionTop = section.offsetTop;
-          const sectionHeight = section.clientHeight;
-          if (scrollY >= (sectionTop - 200)) {
+          const sectionBottom = sectionTop + section.offsetHeight;
+          
+          if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
             current = section.getAttribute('id');
           }
         });
 
+        // Update navigation links
         navLinks.forEach(link => {
           link.classList.remove('active');
           if (link.getAttribute('href') === '#' + current) {
             link.classList.add('active');
           }
         });
-      });
 
-      // FIXED: Initialize tools section state on page load
-      const initializeToolsSection = () => {
-        const toolsSection = document.getElementById('tools');
-        if (toolsSection) {
-          // Check if user was previously viewing a tool
-          const selectedTool = localStorage.getItem('selectedTool');
-          if (selectedTool && toolData[selectedTool]) {
-            // Wait a bit for page to fully load then restore the tool
-            setTimeout(() => {
-              showDetail(selectedTool);
-            }, 300);
-          }
+        // Update breadcrumb
+        if (current) {
+          updateBreadcrumb(current);
+        }
+      }
+
+      window.addEventListener('scroll', updateActiveNavigation);
+
+      // Search functionality
+      window.toggleSearch = function() {
+        const searchModal = document.getElementById('searchModal');
+        const searchInput = document.getElementById('searchInput');
+        
+        if (searchModal.style.display === 'none') {
+          searchModal.style.display = 'flex';
+          searchInput.focus();
+        } else {
+          searchModal.style.display = 'none';
+          searchInput.value = '';
+          document.getElementById('searchResults').innerHTML = '';
         }
       };
-      
-      // Initialize tools section
-      initializeToolsSection();
+
+      window.performSearch = function(event) {
+        const query = event.target.value.toLowerCase().trim();
+        const resultsContainer = document.getElementById('searchResults');
+        
+        if (query.length < 2) {
+          resultsContainer.innerHTML = '';
+          return;
+        }
+
+        const results = searchIndex.filter(item => {
+          return item.title.toLowerCase().includes(query) ||
+                 item.description.toLowerCase().includes(query) ||
+                 item.keywords.some(keyword => keyword.toLowerCase().includes(query));
+        });
+
+        if (results.length === 0) {
+          resultsContainer.innerHTML = '<div class="search-result-item"><p>No results found</p></div>';
+        } else {
+          resultsContainer.innerHTML = results.map(item => `
+            <div class="search-result-item" onclick="navigateToSection('${item.id}')">
+              <h4>${item.title}</h4>
+              <p>${item.description}</p>
+            </div>
+          `).join('');
+        }
+
+        // Handle Enter key
+        if (event.key === 'Enter' && results.length > 0) {
+          navigateToSection(results[0].id);
+        }
+      };
+
+      window.navigateToSection = function(sectionId) {
+        const targetSection = document.getElementById(sectionId);
+        if (targetSection) {
+          targetSection.scrollIntoView({ behavior: 'smooth' });
+          toggleSearch(); // Close search modal
+          
+          // Update navigation
+          navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + sectionId) {
+              link.classList.add('active');
+            }
+          });
+          
+          updateBreadcrumb(sectionId);
+        }
+      };
+
+      // Close search on Escape key
+      document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+          const searchModal = document.getElementById('searchModal');
+          if (searchModal.style.display !== 'none') {
+            toggleSearch();
+          }
+        }
+      });
+
+      // Initialize breadcrumb on load
+      updateActiveNavigation();
       
       // Domain button functionality
       const buttons = document.querySelectorAll('.domain-button');
