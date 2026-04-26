@@ -1,211 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EduInsight - AI-Powered Academic Performance</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    .heading-icon {
-      display: inline-block;
-      margin-right: 8px;
-      background: none !important;
-      -webkit-background-clip: border-box !important;
-      background-clip: border-box !important;
-      -webkit-text-fill-color: initial !important;
-      color: initial !important;
-    }
-  </style>
-</head>
-
-<body>
-  <!-- Navigation Bar -->
-  <nav class="navbar">
-    <div class="nav-container">
-      <div class="nav-logo">
-        <span class="logo-text">Eduinsight</span>
-      </div>
-      <ul class="nav-links">
-        <li><a href="#home" class="nav-link active">Home</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#domain" class="nav-link">Domain</a></li>
-        <li><a href="#tools" class="nav-link">Tools</a></li>
-        <li><a href="#milestones" class="nav-link">Milestones</a></li>
-        <li><a href="#docs" class="nav-link">Docs</a></li>
-        <li><a href="#team" class="nav-link">Team</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- Home Section -->
-  <section id="home" class="hero">
-    <div class="hero-container">
-      <div class="hero-content">
-        <div class="hero-text">
-          <h1 class="hero-title">
-            <span class="title-gradient">Eduinsight</span> <span class="title-gradient">Smarter</span> Tools, Better
-            Grades
-          </h1>
-          <p class="hero-description">
-            Eduinsight uses AI to analyze past papers and lecture content, uncover key patterns, and help students focus
-            on what truly matters for better academic performance.
-          </p>
-          <button class="explore-btn" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
-            <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-              stroke-width="2">
-              <path
-                d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
-            </svg>
-            Explore System
-          </button>
-        </div>
-        <div class="hero-image">
-          <div class="image-frame">
-            <img src="website-image1.png" alt="EduInsight AI Visualization">
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Scroll Down Button -->
-    <button class="scroll-down-btn" onclick="scrollToContact()">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M6 9l6 6 6-6" />
-      </svg>
-    </button>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="about">
-    <div class="about-container">
-      <h1 class="about-title"><span class="heading-icon">🌱</span>About EduInsight</h1>
-      <p class="about-description">
-        EduInsight is an AI powered learning platform built specifically for SLIIT students regarding DMS module.
-        Developed by final year undergraduates at SLIIT, it integrates cutting edge technologies such as:
-      </p>
-
-      <div class="feature-grid">
-        <div class="feature-card">
-          <div class="card-icon">🤖</div>
-          <h3 class="card-title">AI Based Content Analysis</h3>
-          <p class="card-description">
-            The system analyzes past exam papers and lecture materials to identify important topics and question
-            patterns. It helps generate model exam questions aligned with the syllabus to support effective exam
-            preparation.
-          </p>
-          <p class="card-feature">• Feature: Model Paper Generation</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="card-icon">📚</div>
-          <h3 class="card-title">Syllabus Aware Learning Support</h3>
-          <p class="card-description">
-            The system provides study materials such as summaries, diagrams, and learning resources to help students
-            better understand key concepts. It also supports students in completing assignments and improving their
-            subject knowledge.
-          </p>
-          <p class="card-feature">• Feature: CA Guidance</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="card-icon">📊</div>
-          <h3 class="card-title">Adaptive Evaluation & Feedback System</h3>
-          <p class="card-description">
-            The system evaluates student answers and provides feedback to improve writing quality. It also tracks
-            performance, identifies weak areas, and suggests additional practice to help students improve.
-          </p>
-          <p class="card-feature">• Feature: Personalized Feedback & Adaptive Learning</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="card-icon">🎯</div>
-          <h3 class="card-title">Adaptive Personalization</h3>
-          <p class="card-description">
-            The system analyzes student performance in quizzes to identify weak topics. Based on this, it provides
-            personalized questions and study recommendations to support targeted learning.
-          </p>
-          <p class="card-feature">• Feature: Adaptive Study Plans</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Domain Section -->
-  <section id="domain" class="domain-section">
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
-      .domain-section {
-        background: linear-gradient(135deg, #eff6ff 0%, #f8fbff 50%, #edf4ff 100%);
-        min-height: 100vh;
-        padding: 120px 0 80px;
-      }
-
-      .domain-container {
-        max-width: 860px;
-        margin: 0 auto;
-        padding: 0 24px;
-      }
-
-      .section-title {
-        text-align: center;
-        font-size: 48px;
-        font-weight: 700;
-        letter-spacing: -0.02em;
-        margin-bottom: 36px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 12px;
-        background: linear-gradient(135deg, #2563eb, #2563eb);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-      }
-
-      .tabs {
-        display: flex;
-        justify-content: center;
-        gap: 12px;
-        margin-bottom: 32px;
-        flex-wrap: nowrap;
-      }
-
-      .tab-btn {
-        padding: 9px 22px;
-        border-radius: 999px;
-        border: 1.5px solid #2563eb;
-        background: transparent;
-        color: #2563eb;
-        font-size: 0.875rem;
-        font-weight: 500;
-        cursor: pointer;
-        transition: background 0.2s, color 0.2s, border-color 0.2s;
-        font-family: 'Inter', sans-serif;
-      }
-
-      .tab-btn:hover {
-        background: rgba(37, 99, 235, 0.1);
-        color: #1d4ed8;
-      }
-
-      .tab-btn.active {
-        background: #2563eb;
-        color: #fff;
-        border-color: #2563eb;
-      }
-
-      .content-card {
-        background: #ffffff;
-        border: 1px solid rgba(37, 99, 235, 0.12);
-        border-left: 5px solid #2563eb;
-        border-radius: 0 16px 16px 0;
-        padding: 40px 52px;
-        text-align: center;
-        line-height: 1.75;
-        color: #1f2937;
         font-size: 0.95rem;
         box-shadow: 0 4px 24px rgba(37, 99, 235, 0.08);
         animation: fadeIn 0.25s ease;
@@ -649,163 +441,163 @@
         <h1 class="page-title"><span class="heading-icon">🛠️</span>Tools &amp; Technologies</h1>
         <div class="tools-grid">
 
-          <div class="tool-card" onclick="showDetail('react')">
+          <div class="tool-card">
             <span class="card-icon">⚛️</span>
             <div class="card-title">React</div>
             <div class="card-desc">Frontend UI development</div>
           </div>
 
-          <div class="tool-card highlighted" onclick="showDetail('python')">
+          <div class="tool-card highlighted">
             <span class="card-icon">🐍</span>
             <div class="card-title">Python</div>
             <div class="card-desc">AI/ML backend services</div>
           </div>
 
-          <div class="tool-card highlighted" onclick="showDetail('mongodb')">
+          <div class="tool-card highlighted">
             <span class="card-icon">🍃</span>
             <div class="card-title">MongoDB</div>
             <div class="card-desc">NoSQL database for analytics</div>
           </div>
 
-          <div class="tool-card highlighted" onclick="showDetail('fastapi')">
+          <div class="tool-card highlighted">
             <span class="card-icon">⚡</span>
             <div class="card-title">FastAPI</div>
             <div class="card-desc">Lightweight Python backend</div>
           </div>
 
-          <div class="tool-card" onclick="showDetail('vite')">
+          <div class="tool-card">
             <span class="card-icon">🚀</span>
             <div class="card-title">Vite</div>
             <div class="card-desc">Blazing fast dev server for React</div>
           </div>
 
-          <div class="tool-card highlighted" onclick="showDetail('azure')">
+          <div class="tool-card highlighted">
             <span class="card-icon">☁️</span>
             <div class="card-title">Azure</div>
             <div class="card-desc">Cloud hosting and deployment (CI/CD)</div>
           </div>
 
-          <div class="tool-card" onclick="showDetail('github')">
+          <div class="tool-card">
             <span class="card-icon">🔄</span>
             <div class="card-title">GitHub Actions</div>
             <div class="card-desc">Automation workflows for building, testing, deploying</div>
           </div>
 
-          <div class="tool-card highlighted" onclick="showDetail('ocr')">
+          <div class="tool-card highlighted">
             <span class="card-icon">🔍</span>
             <div class="card-title">OCR (Tesseract)</div>
             <div class="card-desc">Text extraction from scanned content &amp; images</div>
           </div>
 
-          <div class="tool-card" onclick="showDetail('rag')">
+          <div class="tool-card">
             <span class="card-icon">🔗</span>
             <div class="card-title">RAG</div>
             <div class="card-desc">Retrieval-Augmented Generation for AI responses</div>
           </div>
 
-          <div class="tool-card highlighted" onclick="showDetail('n8n')">
+          <div class="tool-card highlighted">
             <span class="card-icon">⚙️</span>
             <div class="card-title">n8n Workflow</div>
             <div class="card-desc">Automation workflow orchestration platform</div>
           </div>
 
-          <div class="tool-card" onclick="showDetail('reinforcement')">
+          <div class="tool-card">
             <span class="card-icon">🎯</span>
             <div class="card-title">Reinforcement Learning</div>
             <div class="card-desc">AI training through reward-based learning</div>
           </div>
 
-          <div class="tool-card highlighted" onclick="showDetail('blooms')">
+          <div class="tool-card highlighted">
             <span class="card-icon">🌸</span>
             <div class="card-title">Bloom's Taxonomy</div>
             <div class="card-desc">Educational learning objective classification</div>
           </div>
 
-          <div class="tool-card" onclick="showDetail('graphrag')">
+          <div class="tool-card">
             <span class="card-icon">🕸️</span>
             <div class="card-title">GraphRAG</div>
             <div class="card-desc">Graph-based Retrieval-Augmented Generation</div>
           </div>
 
-          <div class="tool-card highlighted" onclick="showDetail('agentic')">
+          <div class="tool-card highlighted">
             <span class="card-icon">🤖</span>
             <div class="card-title">Agentic Pipeline</div>
             <div class="card-desc">Autonomous AI agent workflow systems</div>
           </div>
 
-          <div class="tool-card" onclick="showDetail('openai')">
+          <div class="tool-card">
             <span class="card-icon">🧠</span>
             <div class="card-title">OpenAI API</div>
             <div class="card-desc">Large Language Models and embeddings</div>
           </div>
 
-          <div class="tool-card highlighted" onclick="showDetail('sentencetransformers')">
+          <div class="tool-card highlighted">
             <span class="card-icon">📝</span>
             <div class="card-title">SentenceTransformers</div>
             <div class="card-desc">Semantic text embeddings for NLP</div>
           </div>
 
-          <div class="tool-card" onclick="showDetail('faiss')">
+          <div class="tool-card">
             <span class="card-icon">🔎</span>
             <div class="card-title">FAISS</div>
             <div class="card-desc">Fast similarity search and clustering</div>
           </div>
 
-          <div class="tool-card highlighted" onclick="showDetail('numpy')">
+          <div class="tool-card highlighted">
             <span class="card-icon">🔢</span>
             <div class="card-title">NumPy</div>
             <div class="card-desc">Numerical computing and arrays</div>
           </div>
 
-          <div class="tool-card" onclick="showDetail('pandas')">
+          <div class="tool-card">
             <span class="card-icon">🐼</span>
             <div class="card-title">Pandas</div>
             <div class="card-desc">Data analysis and manipulation</div>
           </div>
 
-          <div class="tool-card highlighted" onclick="showDetail('sklearn')">
+          <div class="tool-card highlighted">
             <span class="card-icon">📊</span>
             <div class="card-title">scikit-learn</div>
             <div class="card-desc">Machine learning algorithms</div>
           </div>
 
-          <div class="tool-card" onclick="showDetail('graphviz')">
+          <div class="tool-card">
             <span class="card-icon">📈</span>
             <div class="card-title">Graphviz</div>
             <div class="card-desc">Automated diagram visualization</div>
           </div>
 
-          <div class="tool-card highlighted" onclick="showDetail('langchain')">
+          <div class="tool-card highlighted">
             <span class="card-icon">⛓️</span>
             <div class="card-title">LangChain</div>
             <div class="card-desc">Framework for LLM applications</div>
           </div>
 
-          <div class="tool-card" onclick="showDetail('pypdf')">
+          <div class="tool-card">
             <span class="card-icon">📄</span>
             <div class="card-title">PyMuPDF</div>
             <div class="card-desc">PDF document processing and extraction</div>
           </div>
 
-          <div class="tool-card highlighted" onclick="showDetail('opencv')">
+          <div class="tool-card highlighted">
             <span class="card-icon">👁️</span>
             <div class="card-title">OpenCV</div>
             <div class="card-desc">Computer vision and image processing</div>
           </div>
 
-          <div class="tool-card" onclick="showDetail('ml')">
+          <div class="tool-card">
             <span class="card-icon">🤖</span>
             <div class="card-title">Machine Learning</div>
             <div class="card-desc">Data-driven model training and prediction</div>
           </div>
 
-          <div class="tool-card highlighted" onclick="showDetail('tfidf')">
+          <div class="tool-card highlighted">
             <span class="card-icon">📑</span>
             <div class="card-title">TF-IDF</div>
             <div class="card-desc">Text feature extraction and weighting</div>
           </div>
 
-          <div class="tool-card" onclick="showDetail('pydantic')">
+          <div class="tool-card">
             <span class="card-icon">✓</span>
             <div class="card-title">Pydantic</div>
             <div class="card-desc">Data validation and parsing with Python</div>
@@ -814,10 +606,6 @@
         </div>
       </div>
 
-      <div id="detail-page">
-        <button class="back-btn" onclick="goBack()">← Back to Tools</button>
-        <div class="detail-card" id="detail-content"></div>
-      </div>
     </div>
   </section>
 
@@ -2653,281 +2441,7 @@
       window.scrollTo(0, 0);
     }
 
-    // Tools functionality
-    const toolData = {
-      react: {
-        icon: '⚛️',
-        title: 'React',
-        badge: 'Frontend Framework',
-        overview: 'React is a powerful JavaScript library for building dynamic and interactive user interfaces. It uses a component-based architecture, making UI development modular, reusable, and maintainable at scale.',
-        features: ['Component-Based Architecture', 'Virtual DOM for Performance', 'Hooks & State Management', 'React Router for Navigation', 'Context API', 'JSX Syntax'],
-        useCases: ['Single Page Apps', 'Dashboard UIs', 'Reusable Components', 'Real-time Updates']
-      },
-      python: {
-        icon: '🐍',
-        title: 'Python',
-        badge: 'AI/ML Backend',
-        overview: 'Python is the go-to language for AI and ML development. Its rich ecosystem of libraries like NumPy, Pandas, and scikit-learn, combined with frameworks like FastAPI, makes it ideal for building intelligent backend services.',
-        features: ['Rich ML Ecosystem', 'FastAPI Integration', 'Data Processing', 'Scripting & Automation', 'REST API Building', 'Async Support'],
-        useCases: ['ML Model Serving', 'Data Pipelines', 'API Development', 'AI Research']
-      },
-      mongodb: {
-        icon: '🍃',
-        title: 'MongoDB',
-        badge: 'NoSQL Database',
-        overview: 'MongoDB is a flexible, document-oriented NoSQL database that stores data in JSON-like BSON format. It is highly scalable, making it perfect for handling large volumes of unstructured or semi-structured analytics data.',
-        features: ['Document Storage', 'Flexible Schema', 'Aggregation Pipeline', 'Indexing & Search', 'Horizontal Scaling', 'Atlas Cloud'],
-        useCases: ['Analytics Data', 'User Profiles', 'Log Storage', 'Real-time Apps']
-      },
-      fastapi: {
-        icon: '⚡',
-        title: 'FastAPI',
-        badge: 'Python Backend',
-        overview: 'FastAPI is a modern, fast Python web framework for building APIs. It is based on standard Python type hints and provides automatic API documentation, high performance, and easy integration with ML models.',
-        features: ['Auto Swagger Docs', 'Async/Await Support', 'Pydantic Validation', 'OAuth2 Security', 'Dependency Injection', 'Fast Performance'],
-        useCases: ['ML Model APIs', 'REST Services', 'Microservices', 'Data Validation']
-      },
-      vite: {
-        icon: '🚀',
-        title: 'Vite',
-        badge: 'Build Tool',
-        overview: 'Vite is a blazing fast frontend build tool that leverages native ES modules in the browser for instant server start and lightning-fast Hot Module Replacement (HMR), dramatically improving the developer experience.',
-        features: ['Instant Server Start', 'Hot Module Replacement', 'Optimized Bundling', 'TypeScript Support', 'Plugin Ecosystem', 'SSR Support'],
-        useCases: ['React Dev Server', 'Fast Builds', 'HMR Development', 'Production Bundling']
-      },
-      azure: {
-        icon: '☁️',
-        title: 'Azure',
-        badge: 'Cloud Platform',
-        overview: 'Microsoft Azure is a comprehensive cloud computing platform offering services for hosting, deployment, and CI/CD pipelines. It supports containerized applications, serverless functions, and automated deployments via pipelines.',
-        features: ['App Service Hosting', 'CI/CD Pipelines', 'Container Registry', 'Azure DevOps', 'Auto Scaling', 'SSL & Security'],
-        useCases: ['App Deployment', 'CI/CD Automation', 'Cloud Hosting', 'Database Hosting']
-      },
-      github: {
-        icon: '🔄',
-        title: 'GitHub Actions',
-        badge: 'CI/CD Automation',
-        overview: 'GitHub Actions is a powerful CI/CD platform that automates your software workflows directly in your GitHub repository. You can build, test, and deploy your code right from GitHub on push, PR, or scheduled triggers.',
-        features: ['Automated Workflows', 'Multi-OS Runners', 'Secret Management', 'Matrix Builds', 'Marketplace Actions', 'Self-hosted Runners'],
-        useCases: ['Auto Testing', 'Build & Deploy', 'Code Quality Checks', 'Release Automation']
-      },
-      ocr: {
-        icon: '🔍',
-        title: 'OCR (Tesseract)',
-        badge: 'Text Extraction',
-        overview: 'Tesseract is an open-source OCR engine that extracts text from scanned documents, images, and PDFs. It supports 100+ languages and integrates seamlessly with Python for automated document processing pipelines.',
-        features: ['100+ Languages', 'PDF Text Extraction', 'Image Preprocessing', 'Python Integration', 'Batch Processing', 'Custom Training'],
-        useCases: ['Document Scanning', 'Invoice Processing', 'Image-to-Text', 'Form Extraction']
-      },
-      rag: {
-        icon: '🔗',
-        title: 'RAG',
-        badge: 'AI Architecture',
-        overview: 'Retrieval-Augmented Generation combines the power of large language models with external knowledge retrieval. It enables AI systems to provide accurate, context-aware responses by accessing relevant information from knowledge bases before generating answers.',
-        features: ['Knowledge Retrieval', 'Context Enhancement', 'Vector Search', 'Semantic Similarity', 'Real-time Updates', 'Fact Verification'],
-        useCases: ['Question Answering', 'Document Analysis', 'Knowledge Base Queries', 'Educational Support']
-      },
-      n8n: {
-        icon: '⚙️',
-        title: 'n8n Workflow',
-        badge: 'Automation Platform',
-        overview: 'n8n is a powerful workflow automation platform that enables visual creation of complex automated processes. It connects different services and APIs through drag-and-drop interfaces, making it easy to build sophisticated automation pipelines without extensive coding.',
-        features: ['Visual Workflow Builder', '300+ Integrations', 'Custom Nodes', 'Error Handling', 'Scheduled Execution', 'API Endpoints'],
-        useCases: ['Data Processing', 'API Integration', 'Automated Reporting', 'System Monitoring']
-      },
-      reinforcement: {
-        icon: '🎯',
-        title: 'Reinforcement Learning',
-        badge: 'ML Technique',
-        overview: 'Reinforcement Learning is a machine learning paradigm where agents learn optimal behaviors through interaction with an environment. It uses reward-based feedback to train AI systems that can make sequential decisions and improve over time.',
-        features: ['Reward-Based Learning', 'Policy Optimization', 'Q-Learning', 'Deep RL Networks', 'Environment Simulation', 'Multi-Agent Systems'],
-        useCases: ['Game Playing', 'Robotics', 'Resource Optimization', 'Decision Making']
-      },
-      blooms: {
-        icon: '🌸',
-        title: 'Bloom\'s Taxonomy',
-        badge: 'Educational Framework',
-        overview: 'Bloom\'s Taxonomy is a hierarchical framework for classifying educational learning objectives. It helps in designing assessments and learning materials that progressively build cognitive skills from basic recall to complex creation.',
-        features: ['Six Cognitive Levels', 'Question Classification', 'Assessment Design', 'Learning Progression', 'Skill Development', 'Curriculum Planning'],
-        useCases: ['Question Difficulty Assessment', 'Learning Path Design', 'Educational Evaluation', 'Content Classification']
-      },
-      graphrag: {
-        icon: '🕸️',
-        title: 'GraphRAG',
-        badge: 'Advanced RAG',
-        overview: 'GraphRAG extends traditional RAG by incorporating knowledge graphs for more sophisticated information retrieval. It represents data as interconnected entities and relationships, enabling deeper contextual understanding and more accurate AI responses.',
-        features: ['Knowledge Graphs', 'Entity Recognition', 'Relationship Mapping', 'Graph Traversal', 'Contextual Retrieval', 'Multi-hop Reasoning'],
-        useCases: ['Complex Query Processing', 'Knowledge Integration', 'Research Assistance', 'Advanced Analytics']
-      },
-      agentic: {
-        icon: '🤖',
-        title: 'Agentic Pipeline',
-        badge: 'AI Agent System',
-        overview: 'Agentic Pipeline systems create autonomous AI agents that can perceive, reason, and act independently. These pipelines enable sophisticated multi-step workflows where AI agents can make decisions, use tools, and collaborate to achieve complex objectives.',
-        features: ['Autonomous Decision Making', 'Tool Usage', 'Multi-Agent Coordination', 'Planning & Execution', 'Memory Systems', 'Self-Improvement'],
-        useCases: ['Automated Research', 'Complex Problem Solving', 'Workflow Automation', 'Intelligent Assistance']
-      },
-      openai: {
-        icon: '🧠',
-        title: 'OpenAI API',
-        badge: 'LLM Services',
-        overview: 'OpenAI API provides access to powerful language models including GPT-4 and embeddings. It enables integration of cutting-edge natural language processing capabilities for text generation, summarization, translation, and semantic understanding.',
-        features: ['GPT Model Access', 'Text Embeddings', 'Fine-tuning Support', 'Token-based Pricing', 'Rate Limiting', 'Safety Features'],
-        useCases: ['Content Generation', 'Question Answering', 'Text Summarization', 'Semantic Search']
-      },
-      sentencetransformers: {
-        icon: '📝',
-        title: 'SentenceTransformers',
-        badge: 'Semantic Embeddings',
-        overview: 'SentenceTransformers is a Python library for creating high-quality sentence and text embeddings. It provides pre-trained models for semantic similarity, clustering, and semantic search without requiring labeled data.',
-        features: ['Pre-trained Models', 'Semantic Similarity', 'Fast Encoding', 'Multi-language Support', 'Fine-tuning Support', 'GPU Acceleration'],
-        useCases: ['Semantic Search', 'Text Clustering', 'Duplicate Detection', 'Content Recommendation']
-      },
-      faiss: {
-        icon: '🔎',
-        title: 'FAISS',
-        badge: 'Vector Search',
-        overview: 'FAISS (Facebook AI Similarity Search) is a library for efficient similarity search and clustering of dense vectors. It handles large-scale vector databases and performs fast approximate nearest neighbor search on CPUs and GPUs.',
-        features: ['Vector Similarity Search', 'Large-Scale Indexing', 'GPU Support', 'Approximate Search', 'Clustering Support', 'Memory Efficient'],
-        useCases: ['Semantic Search', 'Recommendation Systems', 'Content Retrieval', 'Image Search']
-      },
-      numpy: {
-        icon: '🔢',
-        title: 'NumPy',
-        badge: 'Numerical Computing',
-        overview: 'NumPy is the fundamental package for numerical computing in Python. It provides support for arrays, matrices, mathematical functions, and high-performance vectorized operations essential for scientific computing and data analysis.',
-        features: ['N-dimensional Arrays', 'Mathematical Functions', 'Linear Algebra', 'Random Number Generation', 'Vectorized Operations', 'Broadcasting'],
-        useCases: ['Data Analysis', 'Scientific Computing', 'Matrix Operations', 'Algorithm Implementation']
-      },
-      pandas: {
-        icon: '🐼',
-        title: 'Pandas',
-        badge: 'Data Analysis',
-        overview: 'Pandas is a powerful Python library for data manipulation and analysis. It provides data structures like DataFrames for handling tabular data, enabling efficient cleaning, transformation, aggregation, and analysis of large datasets.',
-        features: ['DataFrames', 'CSV/Excel I/O', 'Data Cleaning', 'Time Series Analysis', 'Aggregation & Grouping', 'Statistical Analysis'],
-        useCases: ['Data Preprocessing', 'EDA Analysis', 'Data Cleaning', 'Report Generation']
-      },
-      sklearn: {
-        icon: '📊',
-        title: 'scikit-learn',
-        badge: 'Machine Learning',
-        overview: 'scikit-learn is a machine learning library providing simple and efficient tools for data analysis and machine learning. It includes algorithms for classification, regression, clustering, dimensionality reduction, and model evaluation.',
-        features: ['Supervised Learning', 'Unsupervised Learning', 'Model Selection', 'Preprocessing', 'Pipeline Construction', 'Cross-validation'],
-        useCases: ['Classification Models', 'Clustering Analysis', 'Feature Scaling', 'Model Evaluation']
-      },
-      graphviz: {
-        icon: '📈',
-        title: 'Graphviz',
-        badge: 'Graph Visualization',
-        overview: 'Graphviz is a graph visualization software that renders directed and undirected graphs from text descriptions. It automatically produces layouts and is widely used for creating ER diagrams, flowcharts, and network visualizations.',
-        features: ['Automated Layout', 'Multiple Output Formats', 'ER Diagram Generation', 'Flowchart Creation', 'DOT Language', 'Customizable Styling'],
-        useCases: ['Database Schema Visualization', 'ER Diagram Generation', 'Flowchart Creation', 'Network Diagrams']
-      },
-      langchain: {
-        icon: '⛓️',
-        title: 'LangChain',
-        badge: 'LLM Framework',
-        overview: 'LangChain is a framework that facilitates development of applications powered by large language models. It provides abstractions for chaining LLM calls, memory management, agent orchestration, and integration with various data sources and tools.',
-        features: ['LLM Chains', 'Memory Management', 'Agent Framework', 'Document Processing', 'RAG Support', 'Tool Integration'],
-        useCases: ['Chatbot Development', 'Document Q&A', 'Data Analysis Automation', 'Agent-based Workflows']
-      },
-      pypdf: {
-        icon: '📄',
-        title: 'PyMuPDF',
-        badge: 'PDF Processing',
-        overview: 'PyMuPDF is a Python binding for MuPDF, providing fast and powerful PDF document processing. It enables text extraction, image extraction, metadata manipulation, and comprehensive annotations support for PDF files.',
-        features: ['Text Extraction', 'Image Extraction', 'Metadata Handling', 'Page Manipulation', 'Annotation Support', 'Performance Optimized'],
-        useCases: ['Document Extraction', 'PDF Text Mining', 'Metadata Processing', 'Document Analysis']
-      },
-      opencv: {
-        icon: '👁️',
-        title: 'OpenCV',
-        badge: 'Computer Vision',
-        overview: 'OpenCV is an open-source computer vision and machine learning library. It provides optimized algorithms for image processing, feature detection, object recognition, video analysis, and real-time visual applications.',
-        features: ['Image Processing', 'Feature Detection', 'Object Recognition', 'Face Detection', 'Video Analysis', 'Performance Optimized'],
-        useCases: ['Image Analysis', 'Document Scanning', 'Video Processing', 'Real-time Detection']
-      },
-      ml: {
-        icon: '🤖',
-        title: 'Machine Learning',
-        badge: 'Predictive Modeling',
-        overview: 'Machine Learning encompasses techniques and algorithms that enable systems to learn from data and make predictions without being explicitly programmed. It uses statistical methods to identify patterns, build models, and improve performance through experience.',
-        features: ['Supervised Learning', 'Unsupervised Learning', 'Feature Engineering', 'Model Training', 'Cross-validation', 'Hyperparameter Tuning'],
-        useCases: ['Predictive Analytics', 'Student Performance Modeling', 'Classification Tasks', 'Personalization Systems']
-      },
-      tfidf: {
-        icon: '📑',
-        title: 'TF-IDF',
-        badge: 'Text Analysis',
-        overview: 'TF-IDF (Term Frequency-Inverse Document Frequency) is a numerical statistical method used to extract important features from text documents. It measures how significant a word is within a document and across a corpus of documents.',
-        features: ['Term Frequency Calculation', 'Inverse Document Frequency', 'Document Similarity', 'Keyword Extraction', 'Feature Vectorization', 'Text Classification'],
-        useCases: ['Information Retrieval', 'Document Analysis', 'Question Difficulty Assessment', 'Content Relevance Scoring']
-      },
-      pydantic: {
-        icon: '✓',
-        title: 'Pydantic',
-        badge: 'Data Validation & Parsing',
-        overview: 'Pydantic is a powerful Python data validation and parsing library that uses Python type hints for runtime validation. It ensures data integrity by automatically validating input data against predefined schemas and provides clear error messages for validation failures.',
-        features: ['Type Checking', 'JSON Serialization', 'Custom Validators', 'Error Handling', 'Model Generation', 'Settings Management', 'Parsing'],
-        useCases: ['API Request Validation', 'Configuration Management', 'Data Pipeline Validation', 'FastAPI Integration', 'Data Parsing']
-      }
-    };
-
-    function showDetail(toolKey) {
-      // FIXED: Store selected tool in localStorage for persistence
-      localStorage.setItem('selectedTool', toolKey);
-      
-      const tool = toolData[toolKey];
-      const content = document.getElementById('detail-content');
-      content.innerHTML = `
-    <div class="detail-header">
-      <span class="detail-icon">${tool.icon}</span>
-      <div>
-        <div class="detail-title">${tool.title}</div>
-        <span class="detail-badge">${tool.badge}</span>
-      </div>
-    </div>
-    <div class="detail-divider"></div>
-    <div class="detail-section-title">Overview</div>
-    <div class="detail-text">${tool.overview}</div>
-    <div class="detail-section-title">Key Features</div>
-    <ul class="feature-list">
-      ${tool.features.map(f => `<li>${f}</li>`).join('')}
-    </ul>
-    <div class="detail-divider"></div>
-    <div class="detail-section-title">Use Cases</div>
-    <div>
-      ${tool.useCases.map(u => `<span class="use-case-tag">${u}</span>`).join('')}
-    </div>
-  `;
-      document.getElementById('tools-page').style.display = 'none';
-      document.getElementById('detail-page').style.display = 'block';
-      // FIXED: Don't scroll when clicking tools - stay in the same position
-    }
-
-    function goBack() {
-      // FIXED: Clear the stored tool selection when going back to tools grid
-      localStorage.removeItem('selectedTool');
-      
-      document.getElementById('detail-page').style.display = 'none';
-      document.getElementById('tools-page').style.display = 'block';
-      // FIXED: Only scroll to top if needed to prevent jarring navigation
-      if (window.scrollY > document.getElementById('tools').offsetTop - 100) {
-        document.getElementById('tools').scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-    
-    // FIXED: Function to restore selected tool when returning to tools section
-    function restoreSelectedTool() {
-      const selectedTool = localStorage.getItem('selectedTool');
-      if (selectedTool && toolData[selectedTool]) {
-        showDetail(selectedTool);
-      } else {
-        // FIXED: Show first tool as default fallback if no tool selected
-        showDetail('python');
-      }
-    }
-
+                                                                                                                                                              
     // Navigation functionality
     document.addEventListener('DOMContentLoaded', function () {
       const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
@@ -2948,20 +2462,9 @@
           const targetId = this.getAttribute('href').substring(1);
           const targetSection = document.getElementById(targetId);
           if (targetSection) {
-            // FIXED: Special handling for tools section to preserve tool state
+            // Always show tools grid
             if (targetId === 'tools') {
-              // Check if we should restore a previously selected tool
-              const selectedTool = localStorage.getItem('selectedTool');
-              if (selectedTool && toolData[selectedTool]) {
-                // User is returning to tools - restore their selection
-                setTimeout(() => {
-                  showDetail(selectedTool);
-                }, 100);
-              } else {
-                // Show tools grid by default
-                document.getElementById('tools-page').style.display = 'block';
-                document.getElementById('detail-page').style.display = 'none';
-              }
+              document.getElementById('tools-page').style.display = 'block';
             }
             targetSection.scrollIntoView({ behavior: 'smooth' });
           }
@@ -2987,18 +2490,12 @@
         });
       });
 
-      // FIXED: Initialize tools section state on page load
+      // Initialize tools section state on page load
       const initializeToolsSection = () => {
         const toolsSection = document.getElementById('tools');
         if (toolsSection) {
-          // Check if user was previously viewing a tool
-          const selectedTool = localStorage.getItem('selectedTool');
-          if (selectedTool && toolData[selectedTool]) {
-            // Wait a bit for page to fully load then restore the tool
-            setTimeout(() => {
-              showDetail(selectedTool);
-            }, 300);
-          }
+          // Always show tools grid
+          document.getElementById('tools-page').style.display = 'block';
         }
       };
       
